@@ -1,0 +1,16 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Site.RegularPages -}}
+  {{- /* 只索引 products 目录下的页面 */ -}}
+  {{- if eq .Section "products" -}}
+    {{- $.Scratch.Add "index" (dict 
+      "title" .Title 
+      "description" .Params.description 
+      "product_description" .Params.product_description 
+      "cat" .Params.cat
+      "permalink" .Permalink 
+      "section" .Section
+      "type" .Type
+    ) -}}
+  {{- end -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

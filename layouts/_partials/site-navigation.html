@@ -1,7 +1,8 @@
-<!-- layouts/partials/site-navigation.html -->
+<!-- layouts/_partials/site-navigation.html -->
 <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200/50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
+      <!-- Logo 部分 -->
       <div class="flex items-center space-x-3">
         <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
           <i class="fas fa-atom text-white text-xl"></i>
@@ -10,15 +11,24 @@
           {{ .Site.Title }}
         </a>
       </div>
+
+      <!-- 菜单部分 -->
       <div class="hidden md:block">
         <div class="ml-10 flex items-center space-x-1">
           {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}" class="nav-link text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium no-underline">
-              {{ .Name }}
-            </a>
+          <a href="{{ .URL }}" class="nav-link text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium no-underline">
+            {{ .Name }}
+          </a>
           {{ end }}
+          
+          <!-- 🔍 新增：搜索按钮 -->
+          <button id="search-toggle" class="text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
       </div>
+
+      <!-- 移动端菜单按钮 -->
       <div class="md:hidden">
         <button class="text-gray-700 hover:text-indigo-600 p-2">
           <i class="fas fa-bars text-2xl"></i>
@@ -26,9 +36,39 @@
       </div>
     </div>
   </div>
+
+  <!-- 🔍 新增：搜索模态框 (放在 nav 内部底部) -->
+  <div id="search-modal" class="hidden fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm transition-opacity">
+    <div class="fixed top-[20%] left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4">
+      <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+        <!-- 搜索输入头 -->
+        <div class="flex items-center border-b border-gray-200 p-4">
+          <i class="fas fa-search text-gray-400 text-lg"></i>
+          <input type="text" id="search-input" 
+            class="w-full ml-3 outline-none text-gray-700 placeholder-gray-400" 
+            placeholder="搜索产品、描述或关键词..." 
+            autocomplete="off">
+          <button id="search-close" class="text-gray-400 hover:text-gray-600">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!-- 搜索结果区域 -->
+        <div id="search-results" class="max-h-[60vh] overflow-y-auto p-2">
+          <!-- 结果将通过 JS 插入这里 -->
+          <div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>
+        </div>
+        <!-- 底部提示 -->
+        <div class="bg-gray-50 px-4 py-2 text-xs text-gray-500 flex justify-between">
+          <span>使用 <kbd class="font-sans border rounded px-1">/</kbd> 快速打开搜索</span>
+          <span id="search-count"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <style>
+/* 保持你原有的样式 */
 .nav-link {
   position: relative;
   transition: all 0.3s ease;
@@ -46,4 +86,127 @@
 .nav-link:hover::after {
   width: 100%;
 }
+/* 新增：搜索结果高亮 */
+.search-result-item:hover {
+  background-color: #f9fafb;
+}
+.search-result-item.active {
+  background-color: #eef2ff;
+}
 </style>
+
+<!-- 🔍 新增：引入 Fuse.js 和搜索脚本 -->
+<!-- 这里使用 CDN，你也可以下载到 static/js -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script>
+  // 等待页面加载
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('search-modal');
+    const toggle = document.getElementById('search-toggle');
+    const close = document.getElementById('search-close');
+    const input = document.getElementById('search-input');
+    const resultsContainer = document.getElementById('search-results');
+    const countSpan = document.getElementById('search-count');
+    
+    let fuse = null;
+    let searchIndex = [];
+
+    // 1. 打开搜索
+    function openSearch() {
+      modal.classList.remove('hidden');
+      input.focus();
+      // 如果还没加载索引，先加载
+      if (!fuse) {
+        loadSearchIndex();
+      }
+    }
+
+    // 2. 关闭搜索
+    function closeSearch() {
+      modal.classList.add('hidden');
+      input.value = '';
+      resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>';
+      countSpan.textContent = '';
+    }
+
+    // 3. 加载索引
+    async function loadSearchIndex() {
+      try {
+        const response = await fetch('/index.json');
+        searchIndex = await response.json();
+        
+        // 配置 Fuse.js
+        fuse = new Fuse(searchIndex, {
+          keys: ['title', 'description', 'product_description', 'cat'],
+          threshold: 0.4, // 匹配灵敏度 (0-1)，越小越严格
+          includeScore: true,
+          minMatchCharLength: 1
+        });
+      } catch (error) {
+        console.error('搜索索引加载失败:', error);
+        resultsContainer.innerHTML = '<div class="p-8 text-center text-red-500">搜索服务加载失败</div>';
+      }
+    }
+
+    // 4. 执行搜索
+    function performSearch(query) {
+      if (!fuse || !query) {
+        resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>';
+        countSpan.textContent = '';
+        return;
+      }
+
+      const results = fuse.search(query);
+      
+      if (results.length === 0) {
+        resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">未找到相关产品</div>';
+        countSpan.textContent = '0 结果';
+        return;
+      }
+
+      countSpan.textContent = `${results.length} 结果`;
+      
+      let html = '';
+      results.forEach(item => {
+        const page = item.item;
+        // 截取描述文字
+        let snippet = page.product_description || page.description || '';
+        snippet = snippet.substring(0, 100) + (snippet.length > 100 ? '...' : '');
+        
+        html += `
+          <a href="${page.permalink}" class="search-result-item block p-4 border-b border-gray-100 last:border-0">
+            <div class="font-bold text-gray-900">${page.title}</div>
+            <div class="text-sm text-indigo-600 mb-1">${page.section}</div>
+            <div class="text-sm text-gray-600">${snippet}</div>
+          </a>
+        `;
+      });
+      resultsContainer.innerHTML = html;
+    }
+
+    // 事件监听
+    toggle.addEventListener('click', openSearch);
+    close.addEventListener('click', closeSearch);
+    
+    // 点击背景关闭
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeSearch();
+    });
+
+    // 输入监听
+    input.addEventListener('input', function(e) {
+      performSearch(e.target.value);
+    });
+
+    // 键盘快捷键 "/" 打开搜索
+    document.addEventListener('keydown', function(e) {
+      if (e.key === '/' && document.activeElement !== input) {
+        e.preventDefault();
+        openSearch();
+      }
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeSearch();
+      }
+    });
+  });
+</script>
