@@ -1,0 +1,15 @@
+---
+image: "/images/VSG-GO05.jpg"
+title: "Nano Flakes Single Layer Graphene Oxide Water Dispersion, 1.0wt%"
+cat: "VSG-GO05"
+product_description: "The graphene oxide water dispersion is a solution obtained by dispersing the powder in water in the concentration of 1.0wt%."
+morphology_appearance: "Brownish-black Liquid"
+purity: ">98%"
+thickness: "0.5-1.5nm"
+diameter: "200-600nm"
+layer: "1"
+surface_area: "300-400m2/g"
+product_size: "1kg"
+manufacture_method: "Hummer"
+storage: "Store at room temperature"
+---

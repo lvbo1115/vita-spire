@@ -1,0 +1,15 @@
+---
+image: "/images/MWCNT-R10.jpg"
+title: "Multi-walled Carbon Nanotubes, 8-15nm, ~50µm Length, >95%, -NH2 Functionalized"
+cat: "MWCNT-R10"
+product_description: "Aminated carbon nanotubes are obtained by starting with carboxylated carbon nanotubes, converting carboxyl groups to amide groups through an amidation reaction, and then decarbonylating at high temperature. The pH value of the aminated carbon nanotube suspension is greater than 7."
+morphology_appearance: "Black powder"
+purity: ">95%"
+diameter: "OD: 8-15nm"
+length: "~50µm"
+surface_area: "100-300m2/g"
+manufacture_method: "CVD"
+key_components: "-NH2: 0.5wt%"
+impurities: "Ash: <5 wt%"
+storage: "Store at room temperature"
+---

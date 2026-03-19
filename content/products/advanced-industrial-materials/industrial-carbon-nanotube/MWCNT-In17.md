@@ -1,0 +1,15 @@
+---
+image: "/images/MWCNT-In17.jpg"
+title: "Industrial Single-walled Carbon Nanotube, >99%"
+cat: "MWCNT-In17"
+background: "Vita Spire's industrial-grade single-walled carbon nanotubes have a purity of up to 99% and can be used in power batteries, energy storage batteries, and mid-range battery cells."
+product_description: "Industrial-grade single-walled carbon nanotubes can achieve a purity of up to 99%, an IG/ID ratio >50, and metal impurities less than 4000 ppm."
+morphology_appearance: "Black powder"
+purity: ">99%"
+diameter: "OD: 1-3nm"
+length: ">100µm"
+surface_area: "400-800m2/g"
+manufacture_method: "CVD"
+impurities: "Ash: <1 wt%; Metal: <4000ppm"
+storage: "Store at room temperature"
+---

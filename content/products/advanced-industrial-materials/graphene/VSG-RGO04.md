@@ -1,0 +1,15 @@
+---
+image: "/images/VSG-RGO04.jpg"
+title: "Aminated Graphene, (NH2-RGO)"
+cat: "VSG-RGO04"
+product_description: "Aminated graphene is a functionalized graphene material in which amino (–NH₂) functional groups are introduced onto the surface of reduced graphene oxide. Amination modification can significantly improve the material's chemical activity, dispersibility, and binding ability to polymers or biomolecules."
+morphology_appearance: "Black fluffy powder"
+purity: ">98%"
+thickness: "1-3nm"
+diameter: "1-3µm"
+layer: "<10"
+surface_area: "100-200m2/g"
+manufacture_method: "RGO"
+key_components: "NH2 Content: 0.5wt%"
+storage: "Store at room temperature"
+---

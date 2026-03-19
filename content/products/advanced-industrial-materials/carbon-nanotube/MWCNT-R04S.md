@@ -1,0 +1,15 @@
+---
+image: "/images/MWCNT-R04S.jpg"
+title: "Multi-walled Carbon Nanotube, 5-15nm, 0.5-2µm Length, >98%, -COOH Functionalized"
+cat: "MWCNT-R04S"
+product_description: "This product is COOH functionalized product. It was prepared by synthesizing multi-walled carbon nanotubes via CVD, followed by mechanical cutting and finally dispersion treatment."
+morphology_appearance: "Black powder"
+purity: ">98%"
+diameter: "OD: 5-15nm"
+length: "0.5-2µm"
+surface_area: "250-350m2/g"
+manufacture_method: "CVD"
+key_components: "-COOH: ~4.0wt%"
+impurities: "Ash: <2 wt%"
+storage: "Store at room temperature"
+---

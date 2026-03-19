@@ -1,0 +1,15 @@
+---
+image: "/images/SWCNT-R03.jpg"
+title: "Single-walled Carbon Nanotube, 1-2nm, >95%, -OH Functionalized"
+cat: "SWCNT-R03"
+product_description: "Flow catalysis is currently the most mature, scalable, and stable technology for the industrial production of single-walled carbon nanotubes, balancing high quality and high production capacity."
+morphology_appearance: "Black powder"
+purity: ">95%"
+diameter: "OD: 1- 2nm"
+length: "5-30µm"
+surface_area: "~580 m2/g"
+manufacture_method: "Floating Catalyst Chemical Vapor Deposition, FC-CVD"
+key_components: "-OH: ~7wt%"
+impurities: "Ash: <3 wt%"
+storage: "Store at room temperature"
+---
