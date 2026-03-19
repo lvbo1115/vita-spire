@@ -11,7 +11,8 @@ product_description: |
   6. This product is compatible with other photosensitive biomaterials, such as HAMA (hyaluronic acid methacrylate) and CSMA (chitosan methacrylate), allowing the preparation of composite bioinks with tailored properties.
 morphology_appearance: "White powder"
 storage: "Dark, Dry, -20 to 4˚C"
-concentration: "1. The recommended concentration of this product is 2%-5% (W/V). The dissolution temperature is 30-40 centigrade, and the solution can be filtered and sterilized through a 0.22um filter.
-2. When using this solution, avoid repeated freezing and thawing."
+concentration: |
+  1. The recommended concentration of this product is 2%-5% (W/V). The dissolution temperature is 30-40 centigrade, and the solution can be filtered and sterilized through a 0.22um filter.
+  2. When using this solution, avoid repeated freezing and thawing.
 usage: "This product is used in combination with LAP, and can be cross-linked and cured under the visible light spectrum of 365-405 nm."
 ---
