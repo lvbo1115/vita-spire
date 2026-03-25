@@ -117,11 +117,13 @@
     }
     .gradient-overlay {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      opacity: 0.85;
+      height: 50%;               
+      background: linear-gradient(to top, rgba(79, 70, 229, 0.9), transparent);
+      opacity: 1;
+      pointer-events: none;
     }
     .btn-explore {
       background: linear-gradient(135deg, #4f46e5, #7c3aed);
