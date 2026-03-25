@@ -1,11 +1,11 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'VitaSpire'
+title = 'Vita Spire'
 theme = 'ananke'
 
 [params]
-  description = "VitaSpire"
-  author = "VitaSpire"
+  description = "Vita Spire"
+  author = "Vita Spire"
 
 [[menu.main]]
   name = "Home"

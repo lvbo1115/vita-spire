@@ -1,0 +1,10 @@
+<!-- layouts/partials/site-favicon.html -->
+{{ $favicon := "favicon.png" }}
+{{ with site.Params.favicon }}
+  {{ $favicon = . }}
+{{ end }}
+
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $favicon | relURL }}">
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">

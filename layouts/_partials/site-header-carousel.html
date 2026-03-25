@@ -1,73 +1,221 @@
-{{ $slides := slice
-  (dict "image" "/images/biomedical-health-materials.jpg" "title" "Biomedical & Health Materials" "desc" "Revolutionary biomaterials transforming healthcare" "color" "indigo")
-  (dict "image" "/images/human-nutrition-solutions.jpg" "title" "Human Nutrition Solutions" "desc" "Scientifically-backed nutritional ingredients for optimal health" "color" "emerald")
-  (dict "image" "/images/advanced-industrial-materials.jpg" "title" "Advanced Industrial Materials" "desc" "High-performance materials for aerospace, automotive, and energy" "color" "red")
-}}
+<!-- layouts/_partials/site-navigation.html -->
+<nav class="bg-white/95 backdrop-blur-md fixed top-0 left-0 right-0 border-b border-gray-200/50 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      
+      <!-- ✅ Logo 部分：自定义图片 + 紫色标题 -->
+      <div class="flex items-center space-x-3">
+        <!-- 自定义 Logo 图片 -->
+        <a href="{{ .Site.Home.RelPermalink }}" class="flex items-center no-underline">
+          <img src="{{ "images/logo.png" | relURL }}" alt="Vita Spire Logo" class="w-10 h-10 object-contain">
+        </a>
+        
+        <!-- 标题：紫色渐变 + 空格 -->
+        <a href="{{ .Site.Home.RelPermalink }}" class="text-2xl font-bold no-underline whitespace-nowrap">
+          <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            {{ .Site.Title }}
+          </span>
+        </a>
+      </div>
 
-<div class="carousel-container" id="carousel">
-  {{ range $index, $slide := $slides }}
-  <div class="carousel-item {{ if eq $index 0 }}active{{ end }}" data-slide="{{ $index }}">
-    <img src="{{ $slide.image }}" alt="{{ $slide.title }}" class="w-full h-full object-cover">
-    <div class="carousel-overlay">
-      <div class="max-w-2xl">
-        <span class="inline-block bg-{{ $slide.color }}-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
-          {{ $slide.title }}
-        </span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-2 text-white">{{ $slide.title }}</h2>
-        <p class="text-gray-200 text-lg">{{ $slide.desc }}</p>
+      <!-- 菜单部分 -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-center space-x-1">
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="nav-link text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium no-underline">
+            {{ .Name }}
+          </a>
+          {{ end }}
+          
+          <!-- 🔍 搜索按钮 -->
+          <button id="search-toggle" class="text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 移动端菜单按钮 -->
+      <div class="md:hidden">
+        <button class="text-gray-700 hover:text-indigo-600 p-2">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
     </div>
   </div>
-  {{ end }}
 
-  <!-- Arrows -->
-  <button onclick="prevSlide()" class="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 z-10">
-    <i class="fas fa-chevron-left text-xl"></i>
-  </button>
-  <button onclick="nextSlide()" class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 z-10">
-    <i class="fas fa-chevron-right text-xl"></i>
-  </button>
-
-  <!-- Indicators -->
-  <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
-    {{ range $index, $ := $slides }}
-    <button onclick="goToSlide({{ $index }})" id="indicator-{{ $index }}" class="w-3 h-3 rounded-full {{ if eq $index 0 }}bg-white{{ else }}bg-white/50{{ end }} transition-all duration-300"></button>
-    {{ end }}
+  <!-- 🔍 搜索模态框 -->
+  <div id="search-modal" class="hidden fixed inset-0 z-[110] bg-gray-900/50 backdrop-blur-sm transition-opacity">
+    <div class="fixed top-[20%] left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4">
+      <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div class="flex items-center border-b border-gray-200 p-4">
+          <i class="fas fa-search text-gray-400 text-lg"></i>
+          <input type="text" id="search-input" 
+            class="w-full ml-3 outline-none text-gray-700 placeholder-gray-400" 
+            placeholder="搜索产品、描述或关键词..." 
+            autocomplete="off">
+          <button id="search-close" class="text-gray-400 hover:text-gray-600">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div id="search-results" class="max-h-[60vh] overflow-y-auto p-2">
+          <div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>
+        </div>
+        <div class="bg-gray-50 px-4 py-2 text-xs text-gray-500 flex justify-between">
+          <span>使用 <kbd class="font-sans border rounded px-1">/</kbd> 快速打开搜索</span>
+          <span id="search-count"></span>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</nav>
 
-<script>
-let currentSlide = 0;
-const totalSlides = {{ len $slides }};
-let autoSlideInterval;
-
-function showSlide(slideIndex) {
-  document.querySelectorAll('.carousel-item').forEach(item => item.classList.remove('active'));
-  const target = document.querySelector(`[data-slide="${slideIndex}"]`);
-  if (target) target.classList.add('active');
-
-  document.querySelectorAll('[id^="indicator-"]').forEach((indicator, index) => {
-    indicator.className = index === slideIndex
-      ? 'w-3 h-3 rounded-full bg-white transition-all duration-300'
-      : 'w-3 h-3 rounded-full bg-white/50 hover:bg-white/75 transition-all duration-300';
-  });
-  currentSlide = slideIndex;
+<style>
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.search-result-item:hover {
+  background-color: #f9fafb;
+}
+.search-result-item.active {
+  background-color: #eef2ff;
 }
 
-function nextSlide() { currentSlide = (currentSlide + 1) % totalSlides; showSlide(currentSlide); }
-function prevSlide() { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; showSlide(currentSlide); }
-function goToSlide(i) { showSlide(i); }
+/* ✅ 强制导航栏在最顶层 */
+nav.fixed {
+  z-index: 9999 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
 
-function startAutoSlide() { autoSlideInterval = setInterval(nextSlide, 6000); }
-function stopAutoSlide() { clearInterval(autoSlideInterval); }
+/* ✅ 确保紫色渐变文字正常显示 */
+.text-gradient-purple {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+</style>
 
-document.addEventListener('DOMContentLoaded', () => {
-  showSlide(currentSlide);
-  startAutoSlide();
-  const carousel = document.getElementById('carousel');
-  if (carousel) {
-    carousel.addEventListener('mouseenter', stopAutoSlide);
-    carousel.addEventListener('mouseleave', startAutoSlide);
+<script src="{{ "js/fuse.min.js" | relURL }}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('search-modal');
+  const toggle = document.getElementById('search-toggle');
+  const close = document.getElementById('search-close');
+  const input = document.getElementById('search-input');
+  const resultsContainer = document.getElementById('search-results');
+  const countSpan = document.getElementById('search-count');
+  const nav = document.querySelector('nav');
+  
+  let fuse = null;
+  let searchIndex = [];
+
+  // 滚动时加深导航栏阴影
+  window.addEventListener('scroll', function() {
+    if (nav) {
+      if (window.scrollY > 10) {
+        nav.classList.add('shadow-xl', 'bg-white/98');
+        nav.classList.remove('shadow-md', 'bg-white/95');
+      } else {
+        nav.classList.remove('shadow-xl', 'bg-white/98');
+        nav.classList.add('shadow-md', 'bg-white/95');
+      }
+    }
+  });
+
+  function openSearch() {
+    modal.classList.remove('hidden');
+    input.focus();
+    if (!fuse) {
+      loadSearchIndex();
+    }
   }
+
+  function closeSearch() {
+    modal.classList.add('hidden');
+    input.value = '';
+    resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>';
+    countSpan.textContent = '';
+  }
+
+  async function loadSearchIndex() {
+    try {
+      const response = await fetch('/index.json');
+      searchIndex = await response.json();
+      fuse = new Fuse(searchIndex, {
+        keys: ['title', 'description', 'product_description', 'cat'],
+        threshold: 0.4,
+        includeScore: true,
+        minMatchCharLength: 1
+      });
+    } catch (error) {
+      console.error('搜索索引加载失败:', error);
+      resultsContainer.innerHTML = '<div class="p-8 text-center text-red-500">搜索服务加载失败</div>';
+    }
+  }
+
+  function performSearch(query) {
+    if (!fuse || !query) {
+      resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>';
+      countSpan.textContent = '';
+      return;
+    }
+    const results = fuse.search(query);
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">未找到相关产品</div>';
+      countSpan.textContent = '0 结果';
+      return;
+    }
+    countSpan.textContent = `${results.length} 结果`;
+    let html = '';
+    results.forEach(item => {
+      const page = item.item;
+      let snippet = page.product_description || page.description || '';
+      snippet = snippet.substring(0, 100) + (snippet.length > 100 ? '...' : '');
+      html += `
+        <a href="${page.permalink}" class="search-result-item block p-4 border-b border-gray-100 last:border-0">
+          <div class="font-bold text-gray-900">${page.title}</div>
+          <div class="text-sm text-indigo-600 mb-1">${page.section}</div>
+          <div class="text-sm text-gray-600">${snippet}</div>
+        </a>
+      `;
+    });
+    resultsContainer.innerHTML = html;
+  }
+
+  toggle.addEventListener('click', openSearch);
+  close.addEventListener('click', closeSearch);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeSearch();
+  });
+  input.addEventListener('input', function(e) {
+    performSearch(e.target.value);
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '/' && document.activeElement !== input) {
+      e.preventDefault();
+      openSearch();
+    }
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeSearch();
+    }
+  });
 });
 </script>
