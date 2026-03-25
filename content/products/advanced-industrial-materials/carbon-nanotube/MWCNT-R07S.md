@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R07S.jpg"
 title: "Multi-walled Carbon Nanotube, 8-15nm, 0.5-2µm Length, >95%, -COOH Functionalized"
 cat: "MWCNT-R07S"
 morphology_appearance: "Black powder"

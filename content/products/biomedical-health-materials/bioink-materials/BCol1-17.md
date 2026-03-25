@@ -1,5 +1,4 @@
 ---
-image: "/images/BCol1-17.jpg"
 title: "Bovine Collagen Type I"
 cat: "BCol1-17"
 product_description: |

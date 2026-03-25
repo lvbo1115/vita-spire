@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD37.jpg"
 title: "Yam Peptide Powder"
 cat: "PEP-FD37"
 background: "In the field of nutrition, Yam Peptide Powder is mainly used as a plant-derived small molecule protein peptide raw material in nutritional supplements, functional foods, and health nutrition formulations to provide easily absorbed amino acids and plant nutritional support."

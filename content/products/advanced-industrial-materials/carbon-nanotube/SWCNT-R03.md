@@ -1,5 +1,4 @@
 ---
-image: "/images/SWCNT-R03.jpg"
 title: "Single-walled Carbon Nanotube, 1-2nm, >95%, -OH Functionalized"
 cat: "SWCNT-R03"
 product_description: "Flow catalysis is currently the most mature, scalable, and stable technology for the industrial production of single-walled carbon nanotubes, balancing high quality and high production capacity."

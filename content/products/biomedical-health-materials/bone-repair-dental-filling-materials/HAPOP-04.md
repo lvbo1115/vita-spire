@@ -1,5 +1,4 @@
 ---
-image: "/images/HAPOP-04.jpg"
 title: "Hydroxyapatite (HAp) Powder for Orthopedic, Type IV"
 cat: "HAPOP-04"
 product_description: |

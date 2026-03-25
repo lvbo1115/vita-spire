@@ -1,5 +1,4 @@
 ---
-image: "/images/HAPAI-02.jpg"
 title: "Hydroxyapatite (HAp) Microspheres for Aesthetic Injection, Type II"
 cat: "HAPAI-02"
 product_description: |

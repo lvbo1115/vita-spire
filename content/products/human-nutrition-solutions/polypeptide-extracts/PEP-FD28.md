@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD28.jpg"
 title: "Matsutake Peptide Powder"
 cat: "PEP-FD28"
 background: "Matsutake Peptide Powder is mainly used as a functional nutritional ingredient in the food industry. It can be applied to functional foods, health powders, beverages, and tonics, combining nutritional value with the characteristics of being derived from edible fungi."

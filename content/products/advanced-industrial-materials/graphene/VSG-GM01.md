@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GM01.jpg"
 title: "CVD Single Layer Graphene Membrane on Cu"
 cat: "VSG-GM01"
 product_description: |

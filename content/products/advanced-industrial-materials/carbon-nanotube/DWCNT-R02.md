@@ -1,5 +1,4 @@
 ---
-image: "/images/DWCNT-R02.jpg"
 title: "Double-walled Carbon Nanotubes, 2-4nm, 60%, -OH Functionalized"
 cat: "DWCNT-R02"
 product_description: "This product is prepared by first catalytically cracking methane in the presence of a cobalt catalyst, followed by air oxidation and acid solution treatment. It contains double-walled carbon nanotubes, single-walled carbon nanotubes, multi-walled carbon nanotubes, and a small amount of amorphous carbon. The content of double-walled carbon nanotubes is approximately 60%. This product is a hydroxylated derivative."

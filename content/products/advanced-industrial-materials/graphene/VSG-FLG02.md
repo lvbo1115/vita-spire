@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-FLG02.jpg"
 title: "Few Layers Graphene, Physical"
 cat: "VSG-FLG02"
 product_description: "This graphene product is produced using physical methods. Few-layers graphene is produced through mechanical exfoliation, assisted expansion via intercalation, and a subsequent freeze-drying step."

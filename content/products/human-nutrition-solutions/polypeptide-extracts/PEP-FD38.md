@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD38.jpg"
 title: "Green Beans Peptide Powder"
 cat: "PEP-FD38"
 background: "Green bean peptides are mainly rich in small molecule active polypeptides, various amino acids, and contain a certain amount of polyphenols and flavonoids. These components together constitute its nutritional value and potential functional properties, making it an important plant protein raw material for functional foods and nutritional supplements."

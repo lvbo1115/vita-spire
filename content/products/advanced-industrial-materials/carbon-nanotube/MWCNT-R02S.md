@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R02S.jpg"
 title: "Multi-walled Carbon Nanotube, 5-15nm, 0.5-2µm Length, >98%"
 cat: "MWCNT-R02S"
 product_description: "This product was prepared by synthesizing multi-walled carbon nanotubes via CVD, followed by mechanical cutting and finally dispersion treatment."

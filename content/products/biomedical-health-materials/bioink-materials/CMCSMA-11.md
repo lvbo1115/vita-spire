@@ -1,5 +1,4 @@
 ---
-image: "/images/CMCSMA-11.jpg"
 title: "Methacrylated Carboxymethyl Chitosan (CMCSMA), 15-35%"
 cat: "CMCSMA-11"
 product_description: |

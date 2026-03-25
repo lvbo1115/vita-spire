@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-RGO01.jpg"
 title: "N-doped Graphene, (N-RGO)"
 cat: "VSG-RGO01"
 product_description: "Nitrogen-doped graphene uses graphene oxide (GO) as a precursor and introduces nitrogen-containing compounds during the reduction process, allowing nitrogen atoms to be doped into the carbon framework of graphene, thereby obtaining nitrogen-doped graphene with a special electronic structure and higher activity."

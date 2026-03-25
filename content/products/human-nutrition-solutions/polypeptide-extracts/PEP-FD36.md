@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD36.jpg"
 title: "Sea buckthorn Peptide Powder"
 cat: "PEP-FD36"
 background: "Sea buckthorn contains a variety of plant-based active ingredients, and its small-molecule peptide form is more easily absorbed, making it a suitable nutritional supplement to support gastrointestinal health and digestive system nutrition. Sea buckthorn contains natural antioxidants (such as polyphenols and vitamins), and its peptide products can serve as antioxidant nutritional ingredients to help maintain a healthy digestive system environment."

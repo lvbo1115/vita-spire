@@ -1,5 +1,4 @@
 ---
-image: "/images/HepMA-15.jpg"
 title: "Methacrylated Heparin (HepMA), Potency 180IU/mg, 5-25%"
 cat: "HepMA-15"
 product_description: |

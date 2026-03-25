@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R03S.jpg"
 title: "Multi-walled Carbon Nanotube, 5-15nm, 0.5-2µm Length, >98%, -OH Functionalized"
 cat: "MWCNT-R03S"
 product_description: "This product is -OH functionalized product. It was prepared by synthesizing multi-walled carbon nanotubes via CVD, followed by mechanical cutting and finally dispersion treatment."

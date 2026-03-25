@@ -1,5 +1,4 @@
 ---
-image: "/images/SFMA-12.jpg"
 title: "Methacrylated Silk Fibroin (SFMA), 70-90%"
 cat: "SFMA-12"
 product_description: |

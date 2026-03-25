@@ -1,5 +1,4 @@
 ---
-image: "/images/HAMA-L08.jpg"
 title: "HAMA, MW<10kDa, 10-30%"
 cat: "HAMA-L08"
 product_description: |

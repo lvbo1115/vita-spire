@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R20.jpg"
 title: "Multi-walled Carbon Nanotubes, 20-30nm, >98%"
 cat: "MWCNT-R20"
 product_description: "This product is prepared by chemical vapor deposition. Natural gas is catalytically cracked at high temperature over a cobalt catalyst to form carbon nanotubes."

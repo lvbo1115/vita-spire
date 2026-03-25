@@ -1,5 +1,4 @@
 ---
-image: "/images/CSMA-09.jpg"
 title: "Chondroitin Sulphate Methacrylate (CSMA), MW35-50kDa, 25%-45%"
 cat: "CSMA-09"
 product_description: |

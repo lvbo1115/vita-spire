@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD35.jpg"
 title: "Cinnamon Peptide Powder"
 cat: "PEP-FD35"
 background: "Cinnamon Peptide Powder can be used as a fortified ingredient in the development of various functional foods."

@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD01.jpg"
 title: "Ginkgo Peptide Powder"
 cat: "PEP-FD01"
 background: "Ginkgo biloba peptide extract is derived from ginkgo biloba fruit. It is rich in easily absorbed small-molecule active peptides. It possesses excellent antioxidant capacity, helping to eliminate free radicals and delay cell aging; it also supports cardiovascular and cerebrovascular health, assists in regulating blood lipids, and exhibits potential neuroprotective and anti-fatigue effects. This product has a small molecular weight and high bioavailability, making it an ideal functional ingredient for enhancing immunity and promoting overall health."

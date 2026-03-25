@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD25.jpg"
 title: "Peanut Peptide Powder"
 cat: "PEP-FD25"
 background: "Peanut Peptide Powder is a small-molecule plant protein peptide powder prepared by enzymatic hydrolysis of peanut protein. It has good solubility and absorption rate and can be used in dietary supplements, sports nutrition, and functional foods."

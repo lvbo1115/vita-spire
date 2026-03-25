@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD06.jpg"
 title: "Sea Cucumber Oligopeptide Powder"
 cat: "PEP-FD06"
 background: "Sea cucumber oligopeptide powder is rich in nutrients and rich in glycopeptides. Oligopeptide Content: >50%"

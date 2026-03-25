@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GO03.jpg"
 title: "Single Layer Graphene Oxide, 0.2-10µm, >98%"
 cat: "VSG-GO03"
 product_description: "Graphene oxide was prepared using a modified Hummer method, and then freeze-dried to obtain graphene oxide powder."

@@ -1,5 +1,4 @@
 ---
-image: "/images/ElaMA-14.jpg"
 title: "Methacryl Elastin (ElaMA), 80-90%"
 cat: "ElaMA-14"
 product_description: |

@@ -1,5 +1,4 @@
 ---
-image: "/images/TCPOP-05.jpg"
 title: "Beta-tricalcium Phosphate (β-TCP) Powder for Orthopedic"
 cat: "TCPOP-05"
 background: "Beta-tricalcium phosphate (β-TCP) is a high-performance bioceramic material for bone repair, possessing excellent biocompatibility and osteoconductivity. It gradually degrades in the body and is ultimately completely replaced by autologous bone, achieving residue-free repair. It can be widely used in orthopedics, dentistry, and plastic surgery for bone defect filling, supporting vascular ingrowth and bone tissue regeneration, making it an ideal material for safe and reliable artificial bone grafting."

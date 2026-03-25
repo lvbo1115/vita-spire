@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R09.jpg"
 title: "Multi-walled Carbon Nanotubes, 8-15nm, ~50µm Length, >95%, -COOH Functionalized"
 cat: "MWCNT-R09"
 product_description: "This product is prepared by chemical vapor deposition and COOH functionalized. Acetylene is catalytically cracked at high temperature using a cobalt catalyst to form carbon nanotubes."

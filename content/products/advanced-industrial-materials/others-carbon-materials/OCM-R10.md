@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R10.jpg"
 title: "Graphitized Carbon Nano Fibers, 50-200nm, >99.9%"
 cat: "OCM-R10"
 product_description: "Carbon nanofibers are mainly prepared by CVD, and graphitized carbon nanofibers are obtained after high-temperature treatment. Graphitized carbon nanofibers exhibit significantly improved electrical and thermal conductivity, making them suitable for high-end energy storage and electronic materials."

@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R20.jpg"
 title: "Graphene Quantum Dot  (Blue fluorescence), 1mg/mL"
 cat: "OCM-R20"
 background: "Graphene quantum dots (GQDs) are graphene nanoparticles typically ranging in size from 2 to 20 nm, exhibiting significant quantum confinement and edge effects. Therefore, they combine the high conductivity of graphene with the tunable luminescence properties of quantum dots, making them important for applications in biomedicine, sensors, energy materials, optoelectronic devices, and many other fields."

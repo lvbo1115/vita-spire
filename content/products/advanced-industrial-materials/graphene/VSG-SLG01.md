@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-SLG01.jpg"
 title: "Single Layer Graphene, Physical"
 cat: "VSG-SLG01"
 product_description: "This graphene product is produced using physical methods. Single-layer graphene is produced through mechanical exfoliation, assisted expansion via intercalation, and a subsequent freeze-drying step."

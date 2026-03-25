@@ -1,5 +1,4 @@
 ---
-image: "/images/SWCNT-R17.jpg"
 title: "Single-walled Carbon Nanotube, 1-2nm, 60%, -OH Functionalized"
 cat: "SWCNT-R17"
 product_description: |

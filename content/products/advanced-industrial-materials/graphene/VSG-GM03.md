@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GM03.jpg"
 title: "Single Layer Graphene Membrane on Quartz"
 cat: "VSG-GM03"
 product_description: |

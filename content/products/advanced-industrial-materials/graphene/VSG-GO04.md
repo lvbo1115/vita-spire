@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GO04.jpg"
 title: "Nano Flakes Single Layer Graphene Oxide, >98%"
 cat: "VSG-GO04"
 product_description: "This product is prepared using the Hummers process. The resulting graphene oxide sheets have smaller dimensions, higher monolayer ratio, higher purity, and good dispersibility. This product is suitable for the modification of materials such as rubber, plastics, and fibers, as well as for in-situ polymerization and other applications."

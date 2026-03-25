@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R07.jpg"
 title: "Multi-walled Carbon Nanotubes, 8-15nm, ~50µm Length,>95%"
 cat: "MWCNT-R07"
 product_description: "This product is prepared by chemical vapor deposition. Acetylene is catalytically cracked at high temperature using a cobalt catalyst to form carbon nanotubes."

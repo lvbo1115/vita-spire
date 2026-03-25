@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD32.jpg"
 title: "Okra Peptide Powder"
 cat: "PEP-FD32"
 background: "Okra contains all eight essential amino acids and is rich in lysine, making it highly nutritious. Okra Peptide Powder, a plant-derived small molecule protein peptide, can be used as a nutritional ingredient in cardiovascular health-related dietary supplements and functional foods, primarily providing antioxidant support and plant protein nutrition."

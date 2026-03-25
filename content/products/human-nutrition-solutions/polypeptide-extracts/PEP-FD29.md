@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD29.jpg"
 title: "Rapeseed Pollen Peptide Powder"
 cat: "PEP-FD29"
 background: "Rapeseed Pollen Peptide Powder can be used as a plant-derived small molecule peptide nutritional ingredient, mainly for nutritional fortification, protein supplementation and functional food development in food, and is suitable for product systems such as nutritional powders, beverages and health foods."

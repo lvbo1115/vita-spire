@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R06.jpg"
 title: "N-Doped Multi-walled Carbon Nanotubes, 30-80nm, >98%"
 cat: "OCM-R06"
 morphology_appearance: "Black powder"

@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GO05.jpg"
 title: "Nano Flakes Single Layer Graphene Oxide Water Dispersion, 1.0wt%"
 cat: "VSG-GO05"
 product_description: "The graphene oxide water dispersion is a solution obtained by dispersing the powder in water in the concentration of 1.0wt%."

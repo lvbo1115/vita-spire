@@ -1,5 +1,4 @@
 ---
-image: "/images/COL1MA-13.jpg"
 title: "Methacrylated Collagen Type I(Col-1 MA), 30-50%"
 cat: "COL1MA-13"
 product_description: |

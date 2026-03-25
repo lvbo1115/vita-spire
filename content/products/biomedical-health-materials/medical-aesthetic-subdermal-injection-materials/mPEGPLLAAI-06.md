@@ -1,5 +1,4 @@
 ---
-image: "/images/mPEGPLLAAI-06.jpg"
 title: "mPEG-PLLA Microspheres"
 cat: "mPEGPLLAAI-06"
 background: |

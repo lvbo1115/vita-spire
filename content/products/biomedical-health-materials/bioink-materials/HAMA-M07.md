@@ -1,5 +1,4 @@
 ---
-image: "/images/HAMA-M07.jpg"
 title: "HAMA, MW10-100kDa, 15-35%"
 cat: "HAMA-M07"
 product_description: |

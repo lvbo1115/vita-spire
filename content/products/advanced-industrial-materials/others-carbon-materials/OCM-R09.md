@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R09.jpg"
 title: "Carbon Nano Fibers, 50-200nm, >95%"
 cat: "OCM-R09"
 product_description: "Carbon nanofibers are mainly prepared by CVD methods and are widely used in batteries, conductive composite materials, and structural reinforcement."

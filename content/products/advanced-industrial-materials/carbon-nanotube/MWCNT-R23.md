@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R23.jpg"
 title: "Multi-walled Carbon Nanotubes, 30-50nm, >98%"
 cat: "MWCNT-R23"
 morphology_appearance: "Black powder"

@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GM02.jpg"
 title: "Single Layer Graphene Membrane on Si/SiO2"
 cat: "VSG-GM02"
 product_description: |

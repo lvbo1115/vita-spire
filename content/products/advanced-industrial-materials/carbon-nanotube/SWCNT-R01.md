@@ -1,5 +1,4 @@
 ---
-image: "/images/SWCNT-R01.jpg"
 title: "Single-walled Carbon Nanotube, <2nm, >95%"
 cat: "SWCNT-R01"
 product_description: |

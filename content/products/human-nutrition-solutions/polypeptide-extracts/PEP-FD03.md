@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD03.jpg"
 title: "Salmon Peptipe Powder"
 cat: "PEP-FD03"
 background: "Salmon Extract Peptide Powder is a high-purity active peptide mixture made from deep-sea salmon meat through bio-enzymatic hydrolysis, low-temperature extraction and molecular sieve separation. It is rich in collagen peptides, antioxidant peptides and a variety of amino acids, has high bioavailability, low molecular weight (usually <1000Da), and is easily absorbed and utilized by the human body."

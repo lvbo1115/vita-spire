@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD02.jpg"
 title: "Ginseng Peptide Powder"
 cat: "PEP-FD02"
 background: "Ginseng extract peptides are made from high-quality ginseng raw materials and processed through extraction. The product is rich in small-molecule active peptides, which are easily absorbed. It has core functions of enhancing immunity and relieving physical fatigue, while also contributing to antioxidant effects, improving cellular metabolism, and supporting nerve function and stress regulation. This product has high bioavailability and is a high-quality functional ingredient for improving sub-health conditions and enhancing overall vitality."

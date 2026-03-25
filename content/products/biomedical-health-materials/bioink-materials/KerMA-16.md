@@ -1,5 +1,4 @@
 ---
-image: "/images/KerMA-16.jpg"
 title: "Methacrylated Keratin (KerMA), 50-70%"
 cat: "KerMA-16"
 product_description: |

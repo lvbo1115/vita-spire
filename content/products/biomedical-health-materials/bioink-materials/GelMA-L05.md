@@ -1,5 +1,4 @@
 ---
-image: "/images/GelMA-L05.jpg"
 title: "GelMA, 250g Bloom, 30-50%"
 cat: "GelMA-L05"
 background: "Gelatin Methacrylate (GelMA) is currently one of the most widely used bioink materials in the field of bioprinting. Derived from modified gelatin, it retains excellent biocompatibility and cell adhesion capabilities while possessing photocrosslinking properties; consequently, it is extensively utilized in bioink systems."

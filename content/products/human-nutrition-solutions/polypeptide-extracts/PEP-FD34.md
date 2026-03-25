@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD34.jpg"
 title: "Momordica Charantia Peptide Powder"
 cat: "PEP-FD34"
 background: "Momordica Charantia  peptide powder is rich in small molecule peptides and polyphenols. In health products, it is mainly used for metabolic health support, weight management and comprehensive nutritional supplements. It can also be used as a plant nutrient raw material for functional foods and nutritional drinks."

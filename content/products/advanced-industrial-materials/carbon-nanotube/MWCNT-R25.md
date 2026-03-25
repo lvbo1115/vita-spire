@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R25.jpg"
 title: "Multi-walled Carbon Nanotubes, 30-50nm, >98%, -COOH Functionalized"
 cat: "MWCNT-R25"
 morphology_appearance: "Black powder"

@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R11.jpg"
 title: "Oriented Multi-walled Carbon Nanotubes, 8-15nm, >98%"
 cat: "OCM-R11"
 product_description: "Oriented multi-walled carbon nanotubes are products that are bundled together and highly oriented in the same direction. The length of carbon nanotube bundles can reach 30-50 microns."

@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-RGO08.jpg"
 title: "Graphene NMP Dispersion, RGO"
 cat: "VSG-RGO08"
 product_description: |

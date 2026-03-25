@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R19.jpg"
 title: "Thermally/Electrically Conductive Graphene Sheet"
 cat: "OCM-R19"
 background: "Graphene films are prepared from graphene oxide through processes such as coating, pre-reduction, high-temperature graphitization, and calendering. This material possesses high thermal conductivity, high electrical conductivity, high flexibility, light weight, and excellent folding resistance. It can achieve efficient heat diffusion and heat dissipation management within limited spaces, and is widely used in mobile smart terminals such as smartphones, tablets, laptops, and wearable devices, providing a reliable heat dissipation solution for device thinning and high-performance operation."

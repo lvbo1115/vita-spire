@@ -1,5 +1,4 @@
 ---
-image: "/images/SWCNT-R18.jpg"
 title: "Single-walled Carbon Nanotube, 1-2nm, 60%, -COOH Functionalized"
 cat: "SWCNT-R18"
 product_description: |

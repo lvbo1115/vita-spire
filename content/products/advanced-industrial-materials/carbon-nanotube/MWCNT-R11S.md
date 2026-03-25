@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R11S.jpg"
 title: "Multi-walled Carbon Nanotube, 20-30nm, 0.5-2µm Length, >98%"
 cat: "MWCNT-R11S"
 morphology_appearance: "Black powder"

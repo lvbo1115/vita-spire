@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD21.jpg"
 title: "Barley Peptide Powder"
 cat: "PEP-FD21"
 background: "Barley peptide powder is a small-molecule plant polypeptide product prepared by the enzymatic hydrolysis of barley. It is rich in amino acids and plant nutrients, has good solubility and absorption, and can be widely used in functional foods, nutritional beverages, meal replacement products and dietary supplements."

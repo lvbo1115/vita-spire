@@ -1,5 +1,4 @@
 ---
-image: "/images/ALMA-10.jpg"
 title: "Alginate Methacrylate (ALMA), 300-360mPa.s, 20-40%"
 cat: "ALMA-10"
 product_description: |

@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R22.jpg"
 title: "Multi-walled Carbon Nanotubes, 20-30nm, >98%, -COOH Functionalized"
 cat: "MWCNT-R22"
 product_description: "This product is prepared by chemical vapor deposition and COOH functionalized. Natural gas is catalytically cracked at high temperature over a cobalt catalyst to form carbon nanotubes."

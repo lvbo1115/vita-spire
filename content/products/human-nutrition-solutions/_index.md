@@ -1,7 +1,6 @@
 ---
 title: "Human Nutrition Solutions"
 description: "Innovative solutions for human nutrition and wellness"
-featured_image: "/images/human-nutrition-solutions.jpg"
 ---
 
 # Human Nutrition Solutions

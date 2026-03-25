@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD10.jpg"
 title: "Tuna Peptide Powder"
 cat: "PEP-FD10"
 background: |

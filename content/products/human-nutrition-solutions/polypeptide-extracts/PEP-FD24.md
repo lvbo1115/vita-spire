@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD24.jpg"
 title: "Corn Peptide Powder"
 cat: "PEP-FD24"
 background: "Corn peptide is a small-molecule plant protein peptide prepared by enzymatic hydrolysis of corn protein. It has good solubility and absorption and can be widely used in dietary supplements, sports nutrition and functional foods."

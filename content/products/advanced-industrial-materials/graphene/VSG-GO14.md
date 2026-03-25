@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GO14.jpg"
 title: "Graphene Oxide Water Dispersion, 8-15µm, 1.0wt%"
 cat: "VSG-GO14"
 product_description: |

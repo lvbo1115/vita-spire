@@ -1,5 +1,4 @@
 ---
-image: "/images/PLGAAI-07.jpg"
 title: "PLGA Microspheres"
 cat: "PLGAAI-07"
 background: |

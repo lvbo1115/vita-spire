@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-RGO03.jpg"
 title: "Hydroxylated Graphene, (OH-RGO)"
 cat: "VSG-RGO03"
 product_description: "Hydroxylated graphene is a functionalized graphene material with a large number of hydroxyl (–OH) functional groups introduced onto its surface. By introducing hydroxyl groups onto the surface or edges of graphene sheets, the hydrophilicity, dispersibility, and chemical reactivity of the material can be significantly improved, thereby expanding its applications in composite materials and functional materials."

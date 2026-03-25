@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD07.jpg"
 title: "Crocodile Peptide Powder"
 cat: "PEP-FD07"
 background: "Crocodile polypeptide powder is a small molecule polypeptide product obtained by enzymatic hydrolysis using crocodile meat as raw material."

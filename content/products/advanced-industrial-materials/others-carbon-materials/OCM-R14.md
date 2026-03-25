@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R14.jpg"
 title: "Ni Coated Multi-walled Carbon Nanotubes, 20-30nm"
 cat: "OCM-R14"
 background: "Nickel-coated carbon nanotubes are composite materials with a core-shell structure formed by depositing a layer of metallic nickel on the surface of carbon nanotubes (CNTs) as a conductive framework. They combine the lightweight and high conductivity of carbon materials with the magnetic, catalytic, and conductive properties of metallic nickel."

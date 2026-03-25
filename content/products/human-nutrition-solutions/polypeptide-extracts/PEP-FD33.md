@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD33.jpg"
 title: "Mulberry Peptide Powder"
 cat: "PEP-FD33"
 background: "Mulberry peptides are rich in small molecule polypeptides, anthocyanins, polyphenols, amino acids, and various nutrients. In the food industry, they are mainly used in functional foods, nutritional beverages, meal replacement products, and health food ingredients."

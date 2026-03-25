@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R08.jpg"
 title: "Large-Inner Thin-walled Carbon Nanotubes, 30-60nm, >60%"
 cat: "OCM-R08"
 product_description: "Large-diameter, thin-walled, multi-walled carbon nanotubes (CNTs) are prepared by catalytic cracking of acetylene using a nickel-based catalyst. They typically have an inner diameter greater than 20 nm, a wall thickness of around 5 nm, and an outer diameter of 30-60 nm for most CNTs."

@@ -1,5 +1,4 @@
 ---
-image: "/images/OCM-R07.jpg"
 title: "Helical Multi-walled Carbon Nanotubes, 100-200nm, >90%"
 cat: "OCM-R07"
 product_description: "Helical multi-walled carbon nanotubes (CNTs) – This product is prepared by catalytic cracking of acetylene using a nickel-based catalyst. The product contains 60 wt% helical CNTs, with the remainder being conventional CNTs. The total CNT content is greater than 90 wt%, and the vast majority of CNTs have an outer diameter of 100-200 nm."

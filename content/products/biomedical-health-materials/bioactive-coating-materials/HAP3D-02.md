@@ -1,5 +1,4 @@
 ---
-image: "/images/HAP3D-02.jpg"
 title: "Hydroxyapatite (HAp) Powder for Thermal Tpraying, Type II"
 cat: "HAP3D-02"
 product_description: |

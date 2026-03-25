@@ -13,3 +13,5 @@
 
 # Build artifacts
 hugo.lock
+
+*.py

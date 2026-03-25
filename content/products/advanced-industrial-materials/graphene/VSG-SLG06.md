@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-SLG06.jpg"
 title: "Few Layers Graphene, 1-50µm, RGO"
 cat: "VSG-SLG06"
 product_description: "This graphene product is produced using a method involving the reduction of graphene oxide."

@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GM04.jpg"
 title: "Multi Layers Graphene Membrane on Ni"
 cat: "VSG-GM04"
 product_description: "Multilayer graphene with 10-100 layers was grown on a Ni substrate using the CVD method."

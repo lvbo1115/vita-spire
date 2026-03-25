@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD05.jpg"
 title: "Oyster Oligopeptide Powder"
 cat: "PEP-FD05"
 background: "Oyster oligopeptide is based on fresh oyster meat as raw material, hydrolyzed by protease, isolated and purified to obtain small molecule active peptides, and at the same time rich in taurine, arginine, zinc, selenium and other active ingredients coexist hydrolysates. Oligopeptide Content: >50%"

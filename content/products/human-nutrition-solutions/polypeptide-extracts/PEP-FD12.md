@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD12.jpg"
 title: "Fish Collagen Peptide"
 cat: "PEP-FD12"
 background: |

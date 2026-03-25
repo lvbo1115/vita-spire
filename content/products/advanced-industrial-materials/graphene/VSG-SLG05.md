@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-SLG05.jpg"
 title: "Single Layer Graphene, RGO"
 cat: "VSG-SLG05"
 product_description: "This graphene product is produced using a method involving the reduction of graphene oxide."

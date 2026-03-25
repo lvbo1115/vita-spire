@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-RGO04.jpg"
 title: "Aminated Graphene, (NH2-RGO)"
 cat: "VSG-RGO04"
 product_description: "Aminated graphene is a functionalized graphene material in which amino (–NH₂) functional groups are introduced onto the surface of reduced graphene oxide. Amination modification can significantly improve the material's chemical activity, dispersibility, and binding ability to polymers or biomolecules."

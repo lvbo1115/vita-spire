@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-RGO05.jpg"
 title: "Nano Flakes Single Layer Graphene, RGO"
 cat: "VSG-RGO05"
 product_description: "This graphene product is produced using a reduced graphene oxide method. The lateral dimensions is nanoscale, and the single-layer ratio is greater than 99%."

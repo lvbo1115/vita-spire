@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-RGO07.jpg"
 title: "Graphene Water Dispersion, RGO"
 cat: "VSG-RGO07"
 product_description: |

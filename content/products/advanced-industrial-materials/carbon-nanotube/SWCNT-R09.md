@@ -1,5 +1,4 @@
 ---
-image: "/images/SWCNT-R09.jpg"
 title: "Large S.S.A Single-walled Carbon Nanotube, <2nm, >95%, >900 m2/g"
 cat: "SWCNT-R09"
 product_description: "Large specific surface area single-walled carbon nanotubes are ideal materials for reactive and interfacial applications, and have significant advantages in energy, electrocatalysis, adsorption separation and high-sensitivity sensing. They represent an important development direction for high-end functional materials."

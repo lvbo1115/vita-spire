@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-R04.jpg"
 title: "Multi-walled Carbon Nanotubes, 5-15nm, >98%"
 cat: "MWCNT-R04"
 product_description: "This product is prepared by chemical vapor deposition. Methane is catalytically cracked at high temperature using a cobalt catalyst to form carbon nanotubes."

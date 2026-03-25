@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-GO01.jpg"
 title: "Single Layer Graphene Oxide, >99.9%"
 cat: "VSG-GO01"
 product_description: "Graphene oxide was produced using a modified Hummer method, followed by low-pressure drying to obtain a fluffy graphene oxide powder."

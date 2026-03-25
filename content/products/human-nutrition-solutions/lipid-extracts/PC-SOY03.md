@@ -1,5 +1,4 @@
 ---
-image: "/images/PC-SOY03.jpg"
 title: "Phosphatidylcholine (PC) from Soy"
 cat: "PC-SOY03"
 background: "Phosphatidylcholine (PC) is a natural phospholipid widely found in soybeans, sunflowers, and egg yolks. It is commonly used in foods and health supplements to provide choline nutrition, supporting liver and nervous system health. It also has excellent emulsifying and nutrient delivery properties, and is widely used in dietary supplements and functional foods."

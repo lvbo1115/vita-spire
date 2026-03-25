@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-MLG07.jpg"
 title: "Multi Layers Graphene, RGO, Industrial"
 cat: "VSG-MLG07"
 product_description: "This graphene product is produced using a method involving the reduction of graphene oxide."

@@ -1,5 +1,4 @@
 ---
-image: "/images/MWCNT-In11.jpg"
 title: "Industrial Multi-Walled Carbon Nanotube, 20-40nm, >95%, -COOH Functionalized"
 cat: "MWCNT-In11"
 background: "The industrial-grade series of carbon nanotubes from Vita Spire feature high purity and offer excellent cost-performance value. They are well suited for large-scale material modification and functional filler applications, and are widely used in fields such as new energy batteries, conductive plastics, electromagnetic shielding, and rubber reinforcement."

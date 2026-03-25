@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD30.jpg"
 title: "Oat Peptide Powder"
 cat: "PEP-FD30"
 background: "Oat Peptide Powder is a small-molecule plant peptide product made from oat protein using enzymatic hydrolysis technology. It contains various amino acids and can be used as a plant-based protein supplement. Additionally, oat peptides have antioxidant properties and offer support for cardiovascular health."

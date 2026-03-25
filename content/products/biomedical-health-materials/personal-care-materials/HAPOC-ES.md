@@ -1,5 +1,4 @@
 ---
-image: "/images/HAPOC-ES.jpg"
 title: "Hydroxyapatite (HAp) Powder for Oral Care, Type IV"
 cat: "HAPOC-ES"
 product_description: |

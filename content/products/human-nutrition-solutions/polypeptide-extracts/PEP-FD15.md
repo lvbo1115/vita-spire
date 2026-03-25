@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD15.jpg"
 title: "Green Lipped Mussel Peptide Powder"
 cat: "PEP-FD15"
 background: "Green Lipped Mussel Peptide Powder is a marine-derived small-molecule peptide powder prepared from green-lipped mussels using enzymatic hydrolysis technology. This raw material is commonly used in the fields of nutrition, health care, and sports health."

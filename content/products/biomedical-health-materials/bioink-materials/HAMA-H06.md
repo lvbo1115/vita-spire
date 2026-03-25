@@ -1,5 +1,4 @@
 ---
-image: "/images/HAMA-H06.jpg"
 title: "HAMA, MW400-900kDa, 10-30%"
 cat: "HAMA-H06"
 product_description: |

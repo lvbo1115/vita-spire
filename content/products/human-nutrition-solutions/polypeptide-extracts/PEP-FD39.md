@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD39.jpg"
 title: "Casein Peptide Powder"
 cat: "PEP-FD39"
 background: "Casein Peptide Powder is a small-molecule protein peptide powder prepared from casein using enzymatic hydrolysis technology. Casein is one of the main proteins in cow's milk, accounting for about 80% of milk protein. The small-molecule peptides formed after enzymatic hydrolysis have better solubility and absorption."

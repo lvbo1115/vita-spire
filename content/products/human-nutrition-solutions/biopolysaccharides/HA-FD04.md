@@ -1,5 +1,4 @@
 ---
-image: "/images/HA-FD04.jpg"
 title: "Hyaluronic Acid Sodium Salt, 1000-2000kDa"
 cat: "HA-FD04"
 product_description: "This product is a medium-to-high molecular weight sodium hyaluronate with a molecular weight of 1000-2000 kDa. This specification of sodium hyaluronate has high viscosity and excellent water retention properties, making it suitable for functional foods, health drinks, and colloidal food systems."

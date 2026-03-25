@@ -1,5 +1,4 @@
 ---
-image: "/images/VSG-RGO02.jpg"
 title: "Carboxylated Graphene, (COOH-RGO)"
 cat: "VSG-RGO02"
 product_description: "Carboxylated graphene is typically obtained from graphene oxide precursors through oxidation, carboxylation modification, and reduction treatments, exhibiting good dispersibility and chemical reactivity."

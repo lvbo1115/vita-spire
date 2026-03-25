@@ -1,5 +1,4 @@
 ---
-image: "/images/PEP-FD17.jpg"
 title: "Lycium Barbarum Peptide Powder"
 cat: "PEP-FD17"
 background: "Lycium Barbarum Peptide Powder is a small-molecule plant peptide powder prepared from goji berries through protein extraction and enzymatic hydrolysis. This product is rich in small-molecule peptides, various amino acids, goji berry polysaccharides, and polyphenols, and can be used to produce nutritional powders, solid beverages, and health foods."
