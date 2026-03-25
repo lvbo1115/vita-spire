@@ -1,14 +1,12 @@
 {{ define "main" }}
-{{/* === 安全获取路径（防止 .File 为 nil）=== */}}
+{{/* === 获取所属大类颜色 === */}}
 {{ $path := "" }}
 {{ with .File }}
   {{ $path = .Dir | strings.TrimSuffix "/" }}
 {{ end }}
-
 {{ $parts := split $path "/" }}
 {{ $isTopLevel := and (ne $path "") (eq (len $parts) 1) }}
 
-{{/* 颜色映射：仅大类有专属颜色 */}}
 {{ $colorMap := dict
   "biomedical-health-materials" "indigo"
   "human-nutrition-solutions" "emerald"
@@ -28,7 +26,6 @@
   {{ end }}
 {{ end }}
 
-{{/* === 颜色类名映射（修复 Tailwind 动态类名问题）=== */}}
 {{ $colorClasses := dict
   "indigo" (dict "from" "from-indigo-600" "to" "to-purple-600" "bg" "bg-indigo-600" "hover" "hover:bg-indigo-700")
   "emerald" (dict "from" "from-emerald-600" "to" "to-teal-600" "bg" "bg-emerald-600" "hover" "hover:bg-emerald-700")
@@ -38,47 +35,46 @@
 {{ $colors := index $colorClasses $color }}
 
 <style>
-  .product-card {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e5e7eb;
-    background: white;
-  }
-  .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
-  }
-  .product-image {
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    height: 256px;
-    object-fit: cover;
-    width: 100%;
-  }
-  .product-card:hover .product-image {
-    transform: scale(1.05);
-  }
-  .gradient-overlay {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .product-card:hover .gradient-overlay {
-    opacity: 0.85;
-  }
-  .btn-explore {
-    transition: all 0.3s ease;
-  }
-  .btn-explore:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-  }
+.product-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 256px;
+  object-fit: cover;
+  width: 100%;
+}
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.product-card:hover .gradient-overlay {
+  opacity: 0.85;
+}
+.btn-explore {
+  transition: all 0.3s ease;
+}
+.btn-explore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
 </style>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-  <!-- Header -->
   <div class="text-center mb-16">
     {{ with .Parent }}
       {{ if ne .Title "Products" }}
@@ -103,10 +99,9 @@
     {{ end }}
   </div>
 
-  <!-- 内容区：根据是否有子页面自动切换 -->
   {{ if .Pages }}
     {{ if $isTopLevel }}
-      <!-- 大类页：显示小类卡片 -->
+      <!-- 大类页：显示子分类卡片 -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {{ range .Pages }}
           {{ $page := . }}
@@ -115,20 +110,16 @@
           {{ $description := .Description | default "Browse this sub-category." }}
           {{ $relPermalink := .RelPermalink }}
 
-          {{/* 小类封面图逻辑：提取子分类名称作为图片文件名 */}}
           {{ $finalImage := "" }}
           {{ with .File }}
             {{ $slug := .Dir | strings.TrimSuffix "/" }}
-            {{ $baseName := path.Base $slug }}  {{/* 提取最后一部分：bioactive-coating-materials */}}
-            
-            {{/* 支持多级路径查找 */}}
+            {{ $baseName := path.Base $slug }}
             {{ $paths := slice 
               (printf "/images/categories/%s.jpg" $baseName)
               (printf "/images/%s.jpg" $baseName)
               (printf "/images/categories/%s.png" $baseName)
               (printf "/images/%s.png" $baseName)
             }}
-            
             {{ range $paths }}
               {{ if and (not $finalImage) (fileExists (printf "static%s" .)) }}
                 {{ $finalImage = . }}
@@ -162,7 +153,7 @@
         {{ end }}
       </div>
     {{ else }}
-      <!-- 小类页：显示产品卡片 -->
+      <!-- 子分类页：显示产品卡片 -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {{ range .Pages }}
           {{ if .IsPage }}
@@ -170,7 +161,6 @@
             {{ $title := .Title }}
             {{ $relPermalink := .RelPermalink }}
             
-            {{/* 产品描述优先级：description > product_description */}}
             {{ $description := "" }}
             {{ with .Params.description }}
               {{ $description = . }}
@@ -180,15 +170,19 @@
               {{ end }}
             {{ end }}
 
-            {{/* 产品图片逻辑：优先 Params.image，其次约定路径 */}}
             {{ $finalImage := .Params.image }}
             {{ if not $finalImage }}
               {{ with .File }}
-                {{ $relDir := .Dir | strings.TrimSuffix "/" }}
                 {{ $baseName := .BaseFileName }}
-                {{ $imgPath := printf "/images/products/%s/%s.jpg" $relDir $baseName }}
-                {{ if fileExists (printf "static%s" $imgPath) }}
-                  {{ $finalImage = $imgPath }}
+                {{ $paths := slice 
+                  (printf "/images/products/%s.jpg" $baseName)
+                  (printf "/images/products/%s.png" $baseName)
+                }}
+                {{ range $paths }}
+                  {{ if fileExists (printf "static%s" .) }}
+                    {{ $finalImage = . }}
+                    {{ break }}
+                  {{ end }}
                 {{ end }}
               {{ end }}
             {{ end }}
@@ -225,7 +219,6 @@
       </div>
     {{ end }}
   {{ else }}
-    <!-- 空状态 -->
     <div class="text-center py-20">
       <div class="inline-flex items-center justify-center w-24 h-24 {{ $colors.bg }} bg-opacity-10 rounded-full mb-6">
         <i class="fas fa-box-open text-4xl {{ $colors.bg }} bg-opacity-20"></i>
@@ -239,7 +232,6 @@
     </div>
   {{ end }}
 
-  <!-- 返回链接 -->
   {{ with .Parent }}
     {{ if ne .RelPermalink "/" }}
       <div class="mt-16 text-center">
