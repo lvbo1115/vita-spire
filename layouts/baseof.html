@@ -115,13 +115,25 @@
     .product-card:hover .product-image {
       transform: scale(1.1) rotate(1deg);
     }
-    .gradient-overlay {
+    /* .gradient-overlay {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       opacity: 0.85;
+    } */
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.85;
+      height: 0;               
+      background: linear-gradient(to top-1, rgba(79, 70, 229, 0.9), transparent);
+      opacity: 1;
+      pointer-events: none;
     }
     .btn-explore {
       background: linear-gradient(135deg, #4f46e5, #7c3aed);
@@ -201,11 +213,11 @@
 <body class="min-h-screen">
   {{ partial "site-navigation.html" . }}
 
-  {{ block "header" . }}
+  <!-- {{ block "header" . }}
     {{ if ne .Kind "home" }}
       {{ partial "site-header.html" . }}
     {{ end }}
-  {{ end }}
+  {{ end }} -->
 
   <main class="pb-20" role="main">
     {{ block "main" . }}{{ end }}

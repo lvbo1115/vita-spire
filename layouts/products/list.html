@@ -64,12 +64,22 @@
           {{ $finalImage := "" }}
           {{ with .File }}
             {{ $slug := .Dir | strings.TrimSuffix "/" }}
-            {{ $imgPath := printf "/images/categories/%s.jpg" $slug }}
-            {{ if fileExists (printf "static%s" $imgPath) }}
-              {{ $finalImage = $imgPath }}
+            {{ $baseName := path.Base $slug }}  {{/* 提取最后一部分：bioactive-coating-materials */}}
+            
+            {{/* 支持多级路径查找 */}}
+            {{ $paths := slice 
+              (printf "/images/categories/%s.jpg" $baseName)
+              (printf "/images/%s.jpg" $baseName)
+              (printf "/images/categories/%s.png" $baseName)
+              (printf "/images/%s.png" $baseName)
+            }}
+            
+            {{ range $paths }}
+              {{ if and (not $finalImage) (fileExists (printf "static%s" .)) }}
+                {{ $finalImage = . }}
+              {{ end }}
             {{ end }}
           {{ end }}
-
           <div class="product-card group">
             <div class="relative overflow-hidden">
               {{ if $finalImage }}
@@ -109,23 +119,18 @@
           {{ $description := .Description | default "No description available." }}
           {{ $relPermalink := .RelPermalink }}
 
-          {{/* 产品图片逻辑（安全访问 Params）*/}}
+          {{/* 产品图片逻辑：使用 Cat. 值作为文件名 */}}
           {{ $finalImage := "" }}
-          {{ with .File }}
-            {{ $relDir := .Dir | strings.TrimSuffix "/" }}
-            {{ $baseName := .BaseFileName }}
-            {{ $imgPath := printf "/images/products/%s/%s.jpg" $relDir $baseName }}
-            
-            {{/* 安全获取自定义图片路径 */}}
-            {{ $customImage := "" }}
-            {{ with $page.Params }}
-              {{ $customImage = .image }}
-            {{ end }}
-            
-            {{ $finalImage = $customImage | default $imgPath }}
-            
-            {{ if not (fileExists (printf "static%s" $finalImage)) }}
-              {{ $finalImage = "" }}
+          {{ with $page.Params.cat }}
+            {{ $paths := slice 
+              (printf "/images/products/%s.jpg" .)
+              (printf "/images/products/%s.png" .)
+            }}
+            {{ range $paths }}
+              {{ if fileExists (printf "static%s" .) }}
+                {{ $finalImage = . }}
+                {{ break }}
+              {{ end }}
             {{ end }}
           {{ end }}
 
