@@ -1,7 +1,40 @@
 {{ define "main" }}
-<!-- Hero Carousel -->
-<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-20">
+<!-- Hero Section -->
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-20">
+  <!-- Main Title -->
+  <div class="text-center mb-16">
+    <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      Pioneering Innovation
+    </h1>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      Discover our cutting-edge solutions in biomedical materials, nutrition science, and advanced industrial applications
+    </p>
+  </div>
+
+  <!-- Carousel (uses your images) -->
   {{ partial "site-header-carousel.html" . }}
+</div>
+
+<!-- Stats -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+      <div class="stat-number">{{ len (where site.RegularPages "Section" "products") }}</div>
+      <p class="text-gray-600 font-medium">Total Products</p>
+    </div>
+    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+      <div class="stat-number">50+</div>
+      <p class="text-gray-600 font-medium">Countries Served</p>
+    </div>
+    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+      <div class="stat-number">200+</div>
+      <p class="text-gray-600 font-medium">Patents Filed</p>
+    </div>
+    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+      <div class="stat-number">15+</div>
+      <p class="text-gray-600 font-medium">Years Experience</p>
+    </div>
+  </div>
 </div>
 
 <!-- Product Categories -->
@@ -21,95 +54,51 @@
     }}
     {{ range $cat := $categories }}
       {{ $pages := where site.RegularPages "Section" (printf "products/%s" $cat.slug) }}
-      
-      <!-- 产品卡片 -->
       <div class="product-card group">
-        <a href="/products/{{ $cat.slug }}/" class="block no-underline">
-          <div class="relative overflow-hidden">
-            <!-- 分类封面图 -->
-            <img src="/images/{{ $cat.slug }}.jpg" alt="{{ $cat.name }}" class="product-image w-full">
-            
-            <!-- 渐变遮罩（悬停显示） -->
-            <div class="gradient-overlay bg-gradient-to-t from-{{ $cat.color }}-600 to-{{ if eq $cat.color "indigo" }}purple{{ else if eq $cat.color "emerald" }}teal{{ else }}orange{{ end }}-600"></div>
-            
-            <!-- 卡片文字（悬停时显示在渐变上） -->
-            <div class="absolute bottom-6 left-6 text-white">
-              <h3 class="text-2xl font-bold mb-2">{{ $cat.name }}</h3>
-              <p class="text-white/90">{{ len $pages }} products available</p>
-            </div>
+        <div class="relative overflow-hidden">
+          <img src="/images/{{ $cat.slug }}.jpg" alt="{{ $cat.name }}" class="product-image w-full">
+          <div class="gradient-overlay bg-gradient-to-t from-{{ $cat.color }}-600 to-{{ if eq $cat.color "indigo" }}purple{{ else if eq $cat.color "emerald" }}teal{{ else }}orange{{ end }}-600"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="text-2xl font-bold mb-2">{{ $cat.name }}</h3>
+            <p class="text-white/90">{{ len $pages }} products available</p>
           </div>
-          
-          <!-- 卡片底部内容 -->
-          <div class="p-6 bg-white">
-            <p class="text-gray-600 mb-6">Click below to browse all products in this category.</p>
-            
-            <!-- ✅ Explore 按钮（带完整样式） -->
-            <div class="btn-explore w-full text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center group-hover:shadow-lg">
-              Explore Products
-              <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-            </div>
-          </div>
-        </a>
+        </div>
+        <div class="p-6 bg-white">
+          <p class="text-gray-600 mb-6">Click below to browse all products in this category.</p>
+          <a href="/products/{{ $cat.slug }}/" class="btn-explore w-full text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center group-hover:shadow-lg">
+            Explore Products
+            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
+        </div>
       </div>
-      
     {{ end }}
   </div>
 </div>
 
-<!-- ✅ 首页专用样式（确保卡片和按钮正常显示） -->
-<style>
-.product-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-}
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
-}
-.product-image {
-  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  height: 256px;
-  object-fit: cover;
-}
-.product-card:hover .product-image {
-  transform: scale(1.05);
-}
-.gradient-overlay {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-.product-card:hover .gradient-overlay {
-  opacity: 0.85;
-}
-.btn-explore {
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  transition: all 0.3s ease;
-}
-.btn-explore:hover {
-  background: linear-gradient(135deg, #4338ca, #6d28d9);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
-}
-.section-title {
-  font-family: 'Playfair Display', serif;
-  position: relative;
-  display: inline-block;
-}
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #4f46e5, #7c3aed);
-  border-radius: 2px;
-}
-</style>
+<!-- Features -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="text-center p-8 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div class="feature-icon bg-gradient-to-r from-indigo-600 to-purple-600 text-white mx-auto mb-4">
+        <i class="fas fa-flask text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-3">Research & Development</h3>
+      <p class="text-gray-600">State-of-the-art R&D facilities driving innovation.</p>
+    </div>
+    <div class="text-center p-8 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div class="feature-icon bg-gradient-to-r from-emerald-600 to-teal-600 text-white mx-auto mb-4">
+        <i class="fas fa-certificate text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Assurance</h3>
+      <p class="text-gray-600">Rigorous quality control for safety and performance.</p>
+    </div>
+    <div class="text-center p-8 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div class="feature-icon bg-gradient-to-r from-red-600 to-orange-600 text-white mx-auto mb-4">
+        <i class="fas fa-globe text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-3">Global Reach</h3>
+      <p class="text-gray-600">Serving customers in over 50 countries worldwide.</p>
+    </div>
+  </div>
+</div>
 {{ end }}
