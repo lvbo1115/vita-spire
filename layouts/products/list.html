@@ -120,17 +120,26 @@
       {{ $columns := .Params.table_columns | default (slice 
         (dict "key" "cat" "label" "Cat. No.")
         (dict "key" "title" "label" "Product Name")
-        (dict "key" "purity" "label" "Purity")
-        (dict "key" "particle_size" "label" "Particle Size")
-        (dict "key" "manufacture_method" "label" "Method")
+        (dict "key" "features" "label" "Features")
       ) }}
+      {{/* 检查是否配置了 image 列 */}}
+      {{ $showImage := false }}
+      {{ range $columns }}
+        {{ if eq .key "image" }}
+          {{ $showImage = true }}
+        {{ end }}
+      {{ end }}
       <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
           <thead class="bg-gray-50">
             <tr>
-              <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b">Image</th>
+              {{ if $showImage }}
+                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b">Image</th>
+              {{ end }}
               {{ range $columns }}
-                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b">{{ .label }}</th>
+                {{ if ne .key "image" }}
+                  <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b">{{ .label }}</th>
+                {{ end }}
               {{ end }}
               <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700 border-b">Action</th>
             </tr>
@@ -156,23 +165,27 @@
               {{ end }}
 
               <tr class="{{ if eq (mod $index 2) 0 }}bg-white{{ else }}bg-gray-50{{ end }} hover:bg-{{ $color }}-50 transition-colors duration-150">
-                <td class="px-4 py-3 border-b">
-                  {{ if $finalImage }}
-                    <img src="{{ $finalImage }}" alt="{{ $title }}" class="w-16 h-16 object-cover rounded">
-                  {{ else }}
-                    <div class="w-16 h-16 bg-gray-100 rounded flex items-center justify-center">
-                      <i class="fas fa-image text-gray-400"></i>
-                    </div>
-                  {{ end }}
-                </td>
-                {{ range $columns }}
-                  <td class="px-4 py-3 border-b text-sm text-gray-700">
-                    {{ if eq .key "title" }}
-                      {{ $title }}
+                {{ if $showImage }}
+                  <td class="px-4 py-3 border-b">
+                    {{ if $finalImage }}
+                      <img src="{{ $finalImage }}" alt="{{ $title }}" class="w-16 h-16 object-cover rounded">
                     {{ else }}
-                      {{ index $page.Params .key | default "N/A" }}
+                      <div class="w-16 h-16 bg-gray-100 rounded flex items-center justify-center">
+                        <i class="fas fa-image text-gray-400"></i>
+                      </div>
                     {{ end }}
                   </td>
+                {{ end }}
+                {{ range $columns }}
+                  {{ if ne .key "image" }}
+                    <td class="px-4 py-3 border-b text-sm text-gray-700">
+                      {{ if eq .key "title" }}
+                        {{ $title }}
+                      {{ else }}
+                        {{ index $page.Params .key | default "N/A" }}
+                      {{ end }}
+                    </td>
+                  {{ end }}
                 {{ end }}
                 <td class="px-4 py-3 border-b text-center">
                   <a href="{{ $relPermalink }}" class="inline-flex items-center px-3 py-1.5 bg-{{ $color }}-600 hover:bg-{{ $color }}-700 text-white text-sm font-medium rounded-lg transition-colors duration-150">
