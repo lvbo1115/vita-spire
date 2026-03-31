@@ -1,7 +1,4 @@
 ---
-features: "=CONCATENATE("Thickness: ",H37,"; Diameter: ",I37,)"
----
-
 title: "Single-walled Carbon Nanotube, <2nm, >95%"
 cat: "SWCNT-R01"
 product_description: |
@@ -19,5 +16,5 @@ surface_area: ">490 m2/g"
 manufacture_method: "Methane is catalytically cracked using a cobalt catalyst and then oxidized in air."
 impurities: "Ash: <5 wt%"
 storage: "The product should be kept sealed and stored in a dry, cool, and well-ventilated place."
-shipping_packaging: "Ideal raw material for CNT-based Transparent Conductive Films for the touch screen, flat panel display, OLED, and thin-film solar industries."
+features: ">490 m2/g"
 ---
