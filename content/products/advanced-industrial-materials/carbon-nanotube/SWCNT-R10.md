@@ -10,4 +10,5 @@ surface_area: "~380 m2/g"
 manufacture_method: "Methane is catalytically cracked using a cobalt catalyst and then oxidized in air."
 impurities: "Ash: <5 wt%"
 storage: "Store at room temperature"
+features: ">900 m2/g"
 ---

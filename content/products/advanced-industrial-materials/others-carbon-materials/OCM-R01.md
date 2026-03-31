@@ -5,4 +5,5 @@ product_description: "99.5% fullerene (C60) is a high-purity carbon nanomaterial
 morphology_appearance: "Black powder"
 purity: "99.5%"
 storage: "Store in a dry, dark environment at room temperature, sealed."
+features: "400-800m2/g"
 ---

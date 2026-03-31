@@ -10,4 +10,5 @@ product_description: |
   6. This product is compatible with other photosensitive biomaterials, such as HAMA (hyaluronic acid methacrylate) and CSMA (chitosan methacrylate), allowing the preparation of composite bioinks with tailored properties.
 morphology_appearance: "White powder"
 storage: "Dark, Dry, -20 to 4˚C"
+features: "White powder"
 ---

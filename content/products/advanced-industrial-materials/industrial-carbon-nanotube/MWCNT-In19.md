@@ -11,4 +11,5 @@ manufacture_method: "CVD"
 impurities: "Ash: <1 wt%; Metal: <4000ppm"
 storage: "Store at room temperature"
 concentration: "4mg/mL"
+features: "400-800m2/g"
 ---

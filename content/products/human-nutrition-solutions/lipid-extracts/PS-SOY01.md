@@ -8,4 +8,5 @@ manufacture_method: "Extraction"
 key_components: "PS: 50%; 70%"
 source: "Soy"
 storage: "Store in a cool, dry and sealed place"
+features: "PS: 50%; 70%"
 ---

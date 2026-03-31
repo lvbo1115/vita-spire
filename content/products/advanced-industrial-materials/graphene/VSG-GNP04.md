@@ -9,4 +9,5 @@ diameter: "5-10µm"
 layer: "<20"
 manufacture_method: "Physical"
 storage: "Store at room temperature"
+features: "Thickness: 4-20nm; Diameter: 5-10µm"
 ---

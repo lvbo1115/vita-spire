@@ -6,4 +6,5 @@ morphology_appearance: "White powder"
 purity: ">99.9%"
 impurities: "Endotoxin: ≤0.5EU/mg"
 storage: "Dark, Dry, Room temperature"
+features: "White powder"
 ---

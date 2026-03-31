@@ -10,4 +10,5 @@ layer: "6-10"
 surface_area: "~50m2/g"
 manufacture_method: "Physical"
 storage: "Store at room temperature"
+features: "Thickness: 3-8nm; Diameter: 1-6µm"
 ---

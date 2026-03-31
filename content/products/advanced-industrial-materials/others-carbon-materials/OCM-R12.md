@@ -11,4 +11,5 @@ length: "~50µm"
 surface_area: "40-100m2/g"
 manufacture_method: "CVD & Chemical electroplating"
 storage: "Store at room temperature"
+features: "200-250m2/g"
 ---

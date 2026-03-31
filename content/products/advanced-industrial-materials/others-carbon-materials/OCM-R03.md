@@ -5,4 +5,5 @@ product_description: "C70 has a similar electronic structure and chemical proper
 morphology_appearance: "Black powder"
 purity: "98.0%"
 storage: "Store in a dry, dark environment at room temperature, sealed."
+features: "Black powder"
 ---

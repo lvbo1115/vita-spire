@@ -8,4 +8,5 @@ molecular_weight: ">1000kDa"
 source: "Tremella fuciformis"
 solubility: "Water Soluble"
 storage: "Store in a cool, dry and sealed place"
+features: ">1000kDa"
 ---

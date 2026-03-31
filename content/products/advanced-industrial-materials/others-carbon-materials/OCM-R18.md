@@ -8,4 +8,6 @@ Coating Density: 0.04~0.1cm2/mg"
 product_size: "Type I:  30*10cm
 Type II:  30*20cm"
 storage: "Store in a dry room temperature. The product is easy to absorb moisture. If you find that the product absorbs moisture, please place it in a vacuum drying oven (40-60 ˚C) to dry for 2 hours."
+features: "Type I:  30*10cm
+Type II:  30*20cm"
 ---

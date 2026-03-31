@@ -12,4 +12,5 @@ purity: ">98%"
 product_size: "100mL"
 impurities: "Ash: <1.5 wt%"
 storage: "This product should be sealed and stored in a cool, dry place. It is recommended to use it within six months of receiving the product."
+features: "1.0wt%"
 ---

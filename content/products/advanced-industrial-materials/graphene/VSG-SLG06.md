@@ -10,4 +10,5 @@ layer: "1-5"
 surface_area: "100-200m2/g"
 manufacture_method: "RGO"
 storage: "Store at room temperature"
+features: "Thickness: 3-8nm; Diameter: 10-50µm"
 ---

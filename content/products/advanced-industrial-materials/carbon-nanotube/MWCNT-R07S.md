@@ -10,4 +10,5 @@ manufacture_method: "CVD"
 key_components: "-COOH: ~4.0wt%"
 impurities: "Ash: <5 wt%"
 storage: "Store at room temperature"
+features: "150-200m2/g"
 ---

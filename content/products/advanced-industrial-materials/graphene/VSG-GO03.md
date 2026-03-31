@@ -13,4 +13,5 @@ key_components: "C content: ~46%
 O content: ~52%
 S content: <1.5%"
 storage: "Store at room temperature"
+features: "Thickness: ~1nm; Diameter: 0.2-10µm"
 ---

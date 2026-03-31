@@ -10,4 +10,5 @@ layer: "1"
 surface_area: "150-300m2/g"
 manufacture_method: "Hummer"
 storage: "Store at room temperature"
+features: "Thickness: ~1nm; Diameter: 0.2-10µm"
 ---

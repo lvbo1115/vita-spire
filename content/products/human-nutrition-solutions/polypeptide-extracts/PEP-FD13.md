@@ -10,4 +10,5 @@ key_components: "Protein content:>60%
 Mucoitin Content: >20%"
 source: "Chicken sternal"
 storage: "Store in a cool, dry and sealed place"
+features: "<2000Da"
 ---

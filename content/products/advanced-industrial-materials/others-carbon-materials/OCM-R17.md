@@ -6,4 +6,6 @@ morphology_appearance: "Black loose blocks"
 product_size: "Type I:  Diameter: 1.2±0.2cm， Height: 1.2±0.2cm
 Type II:  Diameter: 2.0±0.5cm， Height: 2.0±0.5cm"
 storage: "Store in a dry, dark environment at room temperature, sealed. Avoid heavy pressure."
+features: "Type I:  Diameter: 1.2±0.2cm， Height: 1.2±0.2cm
+Type II:  Diameter: 2.0±0.5cm， Height: 2.0±0.5cm"
 ---

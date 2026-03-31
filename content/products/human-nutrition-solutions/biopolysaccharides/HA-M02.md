@@ -8,4 +8,5 @@ source: "Streptococcus equi, Fermentation"
 solubility: "Water Soluble"
 storage: "Store in a cool, dry and sealed place"
 application: "Orthopedics and medical beauty products, etc."
+features: "EP 11.0"
 ---

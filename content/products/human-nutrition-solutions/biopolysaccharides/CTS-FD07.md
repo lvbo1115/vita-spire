@@ -8,4 +8,5 @@ viscosity: "<100mpa.s"
 source: "Mushroom"
 solubility: "Water Soluble"
 storage: "Store in a cool, dry and sealed place"
+features: "<100mpa.s"
 ---

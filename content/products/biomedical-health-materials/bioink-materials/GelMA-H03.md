@@ -15,4 +15,5 @@ concentration: "1. The recommended concentration of this product is 5%-20% (W/V)
 2. The aqueous solution of this product will solidify at 25 centigrade. It can continue to be used after the temperature rises (50-60 centigrade) to melt.
 3. When using this solution, avoid repeated freezing and thawing."
 usage: "This product is used in combination with LAP, and can be cross-linked and cured under the visible light spectrum of 365-405 nm."
+features: "White powder"
 ---

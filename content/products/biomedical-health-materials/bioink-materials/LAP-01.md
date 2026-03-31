@@ -8,4 +8,5 @@ storage: "Dark, Dry, Room temperature"
 concentration: "1. The recommended final concentration is 0.1-0.5%. Dissove temperation is 40-60℃. The solution can be sterilized with a 0.22um filter.
 2. It is recommended to use this solution for immediate use."
 usage: "LAP crosslinks within the visible light spectrum of 365-405 nm."
+features: ">99.0%"
 ---

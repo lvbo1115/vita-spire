@@ -1,4 +1,7 @@
 ---
+features: "=CONCATENATE("Thickness: ",H37,"; Diameter: ",I37,)"
+---
+
 title: "Single-walled Carbon Nanotube, <2nm, >95%"
 cat: "SWCNT-R01"
 product_description: |

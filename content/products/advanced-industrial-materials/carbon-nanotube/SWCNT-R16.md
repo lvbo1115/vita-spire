@@ -19,4 +19,5 @@ surface_area: "~400 m2/g"
 manufacture_method: "CVD"
 impurities: "Ash: <5 wt%"
 storage: "Store at room temperature"
+features: "~380 m2/g"
 ---

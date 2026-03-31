@@ -7,4 +7,5 @@ impurities: "MAA Residue: <1000µg/g
 Endotoxin: <0.5EU/mg
 Total Aerobic Microbial Count: <100CFU/g
 Mold & Yeast: <10CFU/g"
+features: "White powder"
 ---

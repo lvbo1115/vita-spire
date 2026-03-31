@@ -8,4 +8,5 @@ viscosity: "20-500mpa.s"
 source: "Aspergillus Niger"
 solubility: "Acid Soluble"
 storage: "Store in a cool, dry and sealed place"
+features: "20-500mpa.s"
 ---

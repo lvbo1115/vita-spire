@@ -8,4 +8,5 @@ manufacture_method: "Extraction"
 key_components: "PC: 30%; 6=70%"
 source: "Egg Yolk"
 storage: "Store in a cool, dry and sealed place"
+features: "PC: 30%; 6=70%"
 ---

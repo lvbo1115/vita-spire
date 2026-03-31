@@ -8,4 +8,5 @@ viscosity: "50-600mpa.s"
 source: "Mushroom"
 solubility: "Acid Soluble"
 storage: "Store in a cool, dry and sealed place"
+features: "50-600mpa.s"
 ---

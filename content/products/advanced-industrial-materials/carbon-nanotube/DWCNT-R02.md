@@ -11,4 +11,5 @@ manufacture_method: "Catalytic Cracking-CVD"
 key_components: "-OH: ~2.5wt%"
 impurities: "Ash: <5 wt%"
 storage: "Store at room temperature"
+features: "~350m2/g"
 ---

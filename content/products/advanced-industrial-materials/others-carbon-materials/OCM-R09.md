@@ -12,4 +12,5 @@ diameter: "OD: 50-200nm"
 length: "1-15µm"
 manufacture_method: "CVD"
 storage: "Store at room temperature"
+features: "100-200m2/g"
 ---

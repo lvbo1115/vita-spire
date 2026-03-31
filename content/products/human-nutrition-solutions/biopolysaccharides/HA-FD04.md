@@ -8,4 +8,5 @@ molecular_weight: "1000-2000kDa"
 source: "Streptococcus equi, Fermentation"
 solubility: "Water Soluble"
 storage: "Store in a cool, dry and sealed place"
+features: "1000-2000kDa"
 ---

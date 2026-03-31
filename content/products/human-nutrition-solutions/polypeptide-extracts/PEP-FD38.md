@@ -10,4 +10,5 @@ key_components: "Total protein content: >90%
 Total peptide content: >80%"
 source: "Green Beans"
 storage: "Store in a cool, dry and sealed place"
+features: "<3000Da"
 ---

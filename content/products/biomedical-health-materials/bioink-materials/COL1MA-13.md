@@ -14,4 +14,5 @@ concentration: "1. The recommended concentration of this product is < 10mg/mL. S
 2. It is recommended to self-assemble into gel first, and then light curing. Thus can increase mechanical strength.
 3. When using this solution, avoid repeated freezing and thawing."
 usage: "This product is used in combination with LAP, and can be cross-linked and cured under the visible light spectrum of 365-405 nm."
+features: "White powder"
 ---

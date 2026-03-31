@@ -13,4 +13,5 @@ storage: "Dark, Dry, -20 to 4˚C"
 concentration: "1. This product can use deionized water to dissolve. The recommended concentration of this product is 10-20%. Dissolve at 4 centigrade. Avoid prolonged storage at room temperature. The solution can be filtered and sterilized through a 0.22um filter.
 2. When using this solution, avoid repeated freezing and thawing."
 usage: "This product is used in combination with LAP, and can be cross-linked and cured under the visible light spectrum of 365-405 nm."
+features: "White powder"
 ---

@@ -10,4 +10,5 @@ surface_area: "~350m2/g"
 manufacture_method: "Catalytic Cracking-CVD"
 impurities: "Ash: <5 wt%"
 storage: "Store at room temperature"
+features: "~400 m2/g"
 ---

@@ -9,4 +9,5 @@ morphology_appearance: "Black Liquid"
 purity: ">99%"
 product_size: "100mL"
 storage: "Store at room temperature"
+features: "1mg/mL; 10mg/mL"
 ---

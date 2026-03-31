@@ -7,4 +7,5 @@ morphology_appearance: "Black paper"
 thickness: "25µm. Other thicknesses can be customized upon request."
 product_size: "11.5cm*20cm. Other size can be customized upon request."
 storage: "Store in a dry room temperature."
+features: "Product Size: 11.5cm*20cm"
 ---

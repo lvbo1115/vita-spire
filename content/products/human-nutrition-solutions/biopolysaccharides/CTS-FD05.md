@@ -8,4 +8,5 @@ viscosity: "<50mpa.s"
 source: "Crab shell"
 solubility: "Water Soluble"
 storage: "Store in a cool, dry and sealed place"
+features: "<50mpa.s"
 ---

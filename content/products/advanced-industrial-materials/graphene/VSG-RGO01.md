@@ -11,4 +11,5 @@ surface_area: "100-300m2/g"
 manufacture_method: "RGO"
 key_components: "N Content: 5-10wt%"
 storage: "Store at room temperature"
+features: "Thickness: 1-3nm; Diameter: 2-10µm"
 ---

@@ -15,4 +15,5 @@ surface_area: "200-250m2/g"
 manufacture_method: "CVD"
 impurities: "Ash: <2 wt%"
 storage: "Store at room temperature"
+features: "Black powder"
 ---

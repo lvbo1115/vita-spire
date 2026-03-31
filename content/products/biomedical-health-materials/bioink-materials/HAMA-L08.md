@@ -13,4 +13,5 @@ storage: "Dark, Dry, -20 to 4˚C"
 concentration: "1. The recommended concentration of this product is 1%-5% (W/V). Stir overnight below 40 centigradeto dissolve.
 2. When using this solution, avoid repeated freezing and thawing."
 usage: "This product is used in combination with LAP, and can be cross-linked and cured under the visible light spectrum of 365-405 nm."
+features: "White powder"
 ---

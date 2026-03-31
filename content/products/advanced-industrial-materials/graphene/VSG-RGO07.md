@@ -10,4 +10,5 @@ purity: ">99%"
 product_size: "100mL"
 storage: "Store at room temperature"
 concentration: "1mg/mL; 2mg/mL; 5mg/mL"
+features: "1mg/mL; 2mg/mL; 5mg/mL"
 ---

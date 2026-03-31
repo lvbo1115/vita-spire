@@ -11,4 +11,5 @@ manufacture_method: "Methane is catalytically cracked using a cobalt catalyst an
 key_components: "-COOH: ~2.7wt%"
 impurities: "Ash: <5 wt%"
 storage: "Store at room temperature"
+features: "~380 m2/g"
 ---

@@ -11,4 +11,5 @@ manufacture_method: "Floating Catalyst Chemical Vapor Deposition, FC-CVD"
 key_components: "-OH: ~7wt%"
 impurities: "Ash: <3 wt%"
 storage: "Store at room temperature"
+features: "~640 m2/g"
 ---

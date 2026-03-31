@@ -8,4 +8,5 @@ thickness: "0.5-1.2nm"
 diameter: "1-5µm"
 layer: "1-2"
 storage: "Store at room temperature"
+features: "Thickness: 0.5-1.2nm; Diameter: 1-5µm"
 ---

@@ -6,4 +6,5 @@ morphology_appearance: "Transparent graphene film on substrate"
 product_size: "1cm*1cm; 2cm*2cm; 5cm*10cm"
 manufacture_method: "CVD"
 storage: "Store at room temperature"
+features: "1cm*1cm; 2cm*2cm; 5cm*10cm"
 ---

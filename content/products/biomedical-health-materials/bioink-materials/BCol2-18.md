@@ -10,4 +10,5 @@ storage: "Dark, Dry, -20 to 4˚C"
 concentration: "1. The recommended concentration of this product is < 10mg/mL. Stir overnight in 20 mM acetic acid at 4 centigrade.
 2. It can be self-assemble into gel at mild pH under room temperature.
 3. When using this solution, avoid repeated freezing and thawing."
+features: "White powder"
 ---

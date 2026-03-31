@@ -10,4 +10,5 @@ surface_area: ">900 m2/g"
 manufacture_method: "Floating Catalyst Chemical Vapor Deposition, FC-CVD"
 impurities: "Ash: <2.5wt%"
 storage: "Store at room temperature"
+features: "~330 m2/g"
 ---

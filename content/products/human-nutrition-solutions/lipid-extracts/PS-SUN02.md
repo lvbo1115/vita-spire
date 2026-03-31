@@ -8,4 +8,5 @@ manufacture_method: "Extraction"
 key_components: "PS: 20%; 50%"
 source: "Sunflower"
 storage: "Store in a cool, dry and sealed place"
+features: "PS: 20%; 50%"
 ---

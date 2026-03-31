@@ -11,4 +11,5 @@ surface_area: "300-400m2/g"
 product_size: "1kg"
 manufacture_method: "Hummer"
 storage: "Store at room temperature"
+features: "Thickness: 0.5-1.5nm; Diameter: 200-600nm"
 ---

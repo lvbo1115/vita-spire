@@ -5,4 +5,5 @@ product_description: "99.9% fullerene (C60) is a high-purity spherical carbon mo
 morphology_appearance: "Black powder"
 purity: "99.9%"
 storage: "Store in a dry, dark environment at room temperature, sealed."
+features: "Black powder"
 ---

@@ -7,4 +7,5 @@ manufacture_method: "Fermentation"
 source: "Streptococcus equi, Fermentation"
 solubility: "Water Soluble"
 storage: "Store in a cool, dry and sealed place"
+features: "EP 11.0"
 ---

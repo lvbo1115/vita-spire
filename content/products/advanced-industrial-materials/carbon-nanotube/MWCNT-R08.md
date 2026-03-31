@@ -11,4 +11,5 @@ manufacture_method: "CVD"
 key_components: "-OH: ~3.5wt%"
 impurities: "Ash: <5 wt%"
 storage: "Store at room temperature"
+features: "100-200m2/g"
 ---
