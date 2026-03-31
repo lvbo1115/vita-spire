@@ -6,7 +6,10 @@
 {{ end }}
 
 {{ $parts := split $path "/" }}
-{{ $isTopLevel := and (ne $path "") (eq (len $parts) 1) }}
+{{/* 判断是否有子分类（section）*/}}
+{{ $hasSubCategories := gt (len .Sections) 0 }}
+{{/* 如果有子分类则显示卡片，否则显示表格 */}}
+{{ $isTopLevel := $hasSubCategories }}
 
 {{/* 颜色映射：仅大类有专属颜色 */}}
 {{ $colorMap := dict
@@ -112,60 +115,75 @@
         {{ end }}
       </div>
     {{ else }}
-      <!-- 小类页：显示产品卡片 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {{ range .Pages }}
-          {{/* 提前保存当前页面数据 */}}
-          {{ $page := . }}
-          {{ $title := .Title }}
-          {{ $description := .Description | default "No description available." }}
-          {{ $relPermalink := .RelPermalink }}
-
-          {{/* 产品图片逻辑：使用 Cat. 值作为文件名 */}}
-          {{ $finalImage := "" }}
-          {{ with $page.Params.cat }}
-            {{ $paths := slice 
-              (printf "/images/products/%s.jpg" .)
-              (printf "/images/products/%s.png" .)
-            }}
-            {{ range $paths }}
-              {{ if fileExists (printf "static%s" .) }}
-                {{ $finalImage = . }}
-                {{ break }}
+      <!-- 小类页：显示产品表格 -->
+      {{/* 从 _index.md 读取表头配置 */}}
+      {{ $columns := .Params.table_columns | default (slice 
+        (dict "key" "cat" "label" "Cat. No.")
+        (dict "key" "title" "label" "Product Name")
+        (dict "key" "purity" "label" "Purity")
+        (dict "key" "particle_size" "label" "Particle Size")
+        (dict "key" "manufacture_method" "label" "Method")
+      ) }}
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b">Image</th>
+              {{ range $columns }}
+                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b">{{ .label }}</th>
               {{ end }}
-            {{ end }}
-          {{ end }}
+              <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700 border-b">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range $index, $page := .Pages }}
+              {{ $title := .Title }}
+              {{ $relPermalink := .RelPermalink }}
 
-          <div class="product-card group">
-            <div class="relative overflow-hidden">
-              {{ if $finalImage }}
-                <img src="{{ $finalImage }}" alt="{{ $title }}" class="product-image w-full">
-                {{ else }}
-                  <div class="bg-gray-100 w-full h-64 flex items-center justify-center p-4">
-                    <i class="fas fa-folder text-gray-400 text-5xl"></i>
-                  </div>
+              {{/* 产品图片逻辑 */}}
+              {{ $finalImage := "" }}
+              {{ with .Params.cat }}
+                {{ $paths := slice 
+                  (printf "/images/products/%s.jpg" .)
+                  (printf "/images/products/%s.png" .)
+                }}
+                {{ range $paths }}
+                  {{ if fileExists (printf "static%s" .) }}
+                    {{ $finalImage = . }}
+                    {{ break }}
+                  {{ end }}
                 {{ end }}
-              <div class="gradient-overlay bg-gradient-to-t from-{{ $color }}-600 to-{{ 
-                if eq $color "indigo" }}purple
-                {{ else if eq $color "emerald" }}teal
-                {{ else if eq $color "red" }}orange
-                {{ else }}gray{{ end }}-600"></div>
-              <div class="absolute bottom-6 left-6 text-white">
-                <h3 class="text-xl font-bold mb-1">{{ $title }}</h3>
-                {{ with $page.Params.price }}
-                  <p class="text-white/90">{{ . }}</p>
+              {{ end }}
+
+              <tr class="{{ if eq (mod $index 2) 0 }}bg-white{{ else }}bg-gray-50{{ end }} hover:bg-{{ $color }}-50 transition-colors duration-150">
+                <td class="px-4 py-3 border-b">
+                  {{ if $finalImage }}
+                    <img src="{{ $finalImage }}" alt="{{ $title }}" class="w-16 h-16 object-cover rounded">
+                  {{ else }}
+                    <div class="w-16 h-16 bg-gray-100 rounded flex items-center justify-center">
+                      <i class="fas fa-image text-gray-400"></i>
+                    </div>
+                  {{ end }}
+                </td>
+                {{ range $columns }}
+                  <td class="px-4 py-3 border-b text-sm text-gray-700">
+                    {{ if eq .key "title" }}
+                      {{ $title }}
+                    {{ else }}
+                      {{ index $page.Params .key | default "N/A" }}
+                    {{ end }}
+                  </td>
                 {{ end }}
-              </div>
-            </div>
-            <div class="p-6 bg-white">
-              <p class="text-gray-600 mb-6">{{ $description | truncate 120 }}</p>
-              <a href="{{ $relPermalink }}" class="btn-explore w-full text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center group-hover:shadow-lg">
-                View Details
-                <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-              </a>
-            </div>
-          </div>
-        {{ end }}
+                <td class="px-4 py-3 border-b text-center">
+                  <a href="{{ $relPermalink }}" class="inline-flex items-center px-3 py-1.5 bg-{{ $color }}-600 hover:bg-{{ $color }}-700 text-white text-sm font-medium rounded-lg transition-colors duration-150">
+                    <span>Details</span>
+                    <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                  </a>
+                </td>
+              </tr>
+            {{ end }}
+          </tbody>
+        </table>
       </div>
     {{ end }}
   {{ else }}
