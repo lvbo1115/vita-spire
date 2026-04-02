@@ -48,3 +48,8 @@ theme = 'ananke'
   mediaType = "application/json"
   baseName = "index"
   isPlainText = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

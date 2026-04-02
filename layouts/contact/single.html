@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <h1 class="hero-title text-4xl md:text-5xl font-bold mb-6">
+      {{ .Title }}
+    </h1>
+  </div>
+
+  <!-- Content -->
+  <div class="max-w-4xl mx-auto contact-content">
+    {{ .Content }}
+  </div>
+</div>
+
+<style>
+/* Contact page styles */
+.contact-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #e5e7eb;
+}
+.contact-content p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+.contact-content a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+.contact-content a:hover {
+  text-decoration: underline;
+}
+.contact-content strong {
+  color: #374151;
+}
+.contact-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+.contact-content li {
+  margin-bottom: 0.5rem;
+}
+</style>
+{{ end }}
