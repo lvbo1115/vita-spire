@@ -38,9 +38,16 @@
           {{ $productCount = add $productCount (len .Pages) }}
         {{ end }}
       {{ end }}
+      {{/* 查找图片，支持jpg和png */}}
+      {{ $catImage := "" }}
+      {{ if fileExists (printf "static/images/%s.jpg" $cat.slug) }}
+        {{ $catImage = printf "/images/%s.jpg" $cat.slug }}
+      {{ else if fileExists (printf "static/images/%s.png" $cat.slug) }}
+        {{ $catImage = printf "/images/%s.png" $cat.slug }}
+      {{ end }}
       <div class="product-card group">
         <div class="relative overflow-hidden">
-          <img src="/images/{{ $cat.slug }}.jpg" alt="{{ $cat.name }}" class="product-image w-full">
+          <img src="{{ $catImage }}" alt="{{ $cat.name }}" class="product-image w-full">
           <div class="gradient-overlay bg-gradient-to-t from-{{ $cat.color }}-600 to-{{ if eq $cat.color "indigo" }}purple{{ else if eq $cat.color "emerald" }}teal{{ else }}orange{{ end }}-600"></div>
           <div class="absolute bottom-6 left-6 text-white">
             <h3 class="text-2xl font-bold mb-2">{{ $cat.name }}</h3>

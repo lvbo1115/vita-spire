@@ -41,29 +41,28 @@
     </div>
   </div>
 
-  <!-- 🔍 新增：搜索模态框 (放在 nav 内部底部) -->
+  <!-- 🔍 Search Modal -->
   <div id="search-modal" class="hidden fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm transition-opacity">
     <div class="fixed top-[20%] left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4">
       <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
-        <!-- 搜索输入头 -->
+        <!-- Search Input Header -->
         <div class="flex items-center border-b border-gray-200 p-4">
           <i class="fas fa-search text-gray-400 text-lg"></i>
           <input type="text" id="search-input" 
             class="w-full ml-3 outline-none text-gray-700 placeholder-gray-400" 
-            placeholder="搜索产品、描述或关键词..." 
+            placeholder="Search products, descriptions or keywords..." 
             autocomplete="off">
           <button id="search-close" class="text-gray-400 hover:text-gray-600">
             <i class="fas fa-times"></i>
           </button>
         </div>
-        <!-- 搜索结果区域 -->
+        <!-- Search Results Area -->
         <div id="search-results" class="max-h-[60vh] overflow-y-auto p-2">
-          <!-- 结果将通过 JS 插入这里 -->
-          <div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>
+          <div class="p-8 text-center text-gray-500">Enter keywords to start searching</div>
         </div>
-        <!-- 底部提示 -->
+        <!-- Footer Hint -->
         <div class="bg-gray-50 px-4 py-2 text-xs text-gray-500 flex justify-between">
-          <span>使用 <kbd class="font-sans border rounded px-1">/</kbd> 快速打开搜索</span>
+          <span>Press <kbd class="font-sans border rounded px-1">/</kbd> to quickly open search</span>
           <span id="search-count"></span>
         </div>
       </div>
@@ -157,33 +156,33 @@ nav.fixed {
     function closeSearch() {
       modal.classList.add('hidden');
       input.value = '';
-      resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>';
+      resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">Enter keywords to start searching</div>';
       countSpan.textContent = '';
     }
 
-    // 3. 加载索引
+    // 3. Load search index
     async function loadSearchIndex() {
       try {
         const response = await fetch('/index.json');
         searchIndex = await response.json();
         
-        // 配置 Fuse.js
+        // Configure Fuse.js
         fuse = new Fuse(searchIndex, {
           keys: ['title', 'description', 'product_description', 'cat'],
-          threshold: 0.4, // 匹配灵敏度 (0-1)，越小越严格
+          threshold: 0.4,
           includeScore: true,
           minMatchCharLength: 1
         });
       } catch (error) {
-        console.error('搜索索引加载失败:', error);
-        resultsContainer.innerHTML = '<div class="p-8 text-center text-red-500">搜索服务加载失败</div>';
+        console.error('Search index loading failed:', error);
+        resultsContainer.innerHTML = '<div class="p-8 text-center text-red-500">Search service failed to load</div>';
       }
     }
 
-    // 4. 执行搜索
+    // 4. Perform search
     function performSearch(query) {
       if (!fuse || !query) {
-        resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">输入关键词开始搜索</div>';
+        resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">Enter keywords to start searching</div>';
         countSpan.textContent = '';
         return;
       }
@@ -191,12 +190,12 @@ nav.fixed {
       const results = fuse.search(query);
       
       if (results.length === 0) {
-        resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">未找到相关产品</div>';
-        countSpan.textContent = '0 结果';
+        resultsContainer.innerHTML = '<div class="p-8 text-center text-gray-500">No products found</div>';
+        countSpan.textContent = '0 results';
         return;
       }
 
-      countSpan.textContent = `${results.length} 结果`;
+      countSpan.textContent = `${results.length} results`;
       
       let html = '';
       results.forEach(item => {
