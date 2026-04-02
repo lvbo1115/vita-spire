@@ -4,10 +4,14 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
       <div class="col-span-1 md:col-span-2">
         <div class="flex items-center space-x-3 mb-6">
-          <div class="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
-            <i class="fas fa-atom text-white text-2xl"></i>
-          </div>
-          <h3 class="text-3xl font-bold">{{ .Site.Title }}</h3>
+          <a href="{{ .Site.Home.RelPermalink }}" class="flex items-center no-underline">
+            <img src="{{ "images/logo.png" | relURL }}" alt="Vita Spire Logo" class="w-12 h-12 object-contain">
+          </a>
+          <a href="{{ .Site.Home.RelPermalink }}" class="text-3xl font-bold no-underline">
+            <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              {{ .Site.Title }}
+            </span>
+          </a>
         </div>
         <p class="text-gray-300 mb-8 max-w-md leading-relaxed">
           {{ .Site.Params.footerDescription | default "Pioneering innovation in materials science and health solutions." }}
