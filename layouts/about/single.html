@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <h1 class="hero-title text-4xl md:text-5xl font-bold mb-6">
+      {{ .Title }}
+    </h1>
+  </div>
+
+  <!-- Content with custom styling -->
+  <div class="max-w-4xl mx-auto" id="about-page-content">
+    {{ .Content }}
+  </div>
+</div>
+
+<style>
+/* About页面内容样式 - 使用ID选择器提高优先级 */
+#about-page-content p {
+  color: #374151 !important;
+  line-height: 1.8 !important;
+  font-size: 1.125rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* 首段简介特殊样式 */
+#about-page-content > p:first-child {
+  font-size: 1.25rem !important;
+  color: #1f2937 !important;
+  line-height: 1.9 !important;
+  padding: 2rem !important;
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%) !important;
+  border-radius: 1rem !important;
+  margin-bottom: 2.5rem !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1) !important;
+}
+
+/* 业务板块标题样式 */
+#about-page-content h2 {
+  color: #1f2937 !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: 3px solid #e5e7eb !important;
+}
+
+/* 业务板块内容区域 */
+#about-page-content h2 + p {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  padding: 1.5rem !important;
+  border-radius: 0.75rem !important;
+  border-left: 4px solid #4f46e5 !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+</style>
+{{ end }}
