@@ -6,6 +6,9 @@ theme = 'ananke'
 [params]
   description = "Vita Spire"
   author = "Vita Spire"
+  address = "20 Bay Street, 11th Floor<br>Toronto, ON M5J 2N8<br>Canada"
+  email = "info@vita-spire.com"
+  phone = "+1 605 585 4565"
 
 [[menu.main]]
   name = "Home"
