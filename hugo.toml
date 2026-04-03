@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://vita-spire.com/'
 languageCode = 'en-us'
 title = 'Vita Spire'
 theme = 'ananke'

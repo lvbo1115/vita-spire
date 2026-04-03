@@ -5,8 +5,8 @@ background: "Phosphatidylcholine (PC) is a natural phospholipid widely found in 
 product_description: "Vita Spire offers PC products derived from egg yolks, in 30% and 70% concentrations, suitable for food and health product formulations such as dietary supplements, functional foods, and nutritional beverages."
 morphology_appearance: "Yellow Powder or Solid"
 manufacture_method: "Extraction"
-key_components: "PC: 30%; 6=70%"
+key_components: "PC: 30%; 70%"
 source: "Egg Yolk"
 storage: "Store in a cool, dry and sealed place"
-features: "PC: 30%; 6=70%"
+features: "PC: 30%; 70%"
 ---
