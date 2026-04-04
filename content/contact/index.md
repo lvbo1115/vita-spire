@@ -10,10 +10,10 @@ We'd love to hear from you! Whether you have a question about our products, need
 
 **Vita Spire Inc.**
 
-**Address:**  
+<!-- **Address:**  
 20 Bay Street, 11th Floor  
 Toronto, ON M5J 2N8  
-Canada
+Canada -->
 
 **Email:**
 - General Inquiries: [info@vita-spire.com](mailto:info@vita-spire.com)
