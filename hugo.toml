@@ -36,13 +36,18 @@ theme = 'ananke'
   weight = 30
 
 [[menu.main]]
+  name = "Marketing Materials"
+  url = "/marketing-materials/"
+  weight = 35
+
+[[menu.main]]
   name = "Contact Us"
   url = "/contact/"
-  weight = 35
+  weight = 40
 
 [outputs]
   home = ["HTML", "JSON", "RSS"]
-  section = ["HTML", "JSON", "RSS"]
+  section = ["HTML", "RSS"]
 
 [outputFormats.JSON]
   mediaType = "application/json"

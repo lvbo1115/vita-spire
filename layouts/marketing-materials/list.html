@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{ $color := "amber" }}
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <h1 class="hero-title text-4xl md:text-5xl font-bold mb-6">
+      {{ .Title }}
+    </h1>
+    {{ with .Description }}
+      <p class="category-description max-w-5xl mx-auto">{{ . }}</p>
+    {{ end }}
+  </div>
+
+  <!-- PDF Card Grid -->
+  {{ if .Pages }}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range .Pages }}
+        {{ $title := .Title }}
+        {{ $pdf := .Params.pdf }}
+        {{ $cover := .Params.cover_image }}
+
+        <a href="{{ $pdf }}" target="_blank" rel="noopener noreferrer" class="product-card group flex flex-col h-full no-underline">
+          <div class="relative overflow-hidden">
+            {{ if $cover }}
+              {{ if fileExists (printf "static%s" $cover) }}
+                <img src="{{ $cover }}" alt="{{ $title }}" class="product-image w-full">
+              {{ else }}
+                <div class="bg-gray-100 w-full h-64 flex items-center justify-center p-4">
+                  <i class="fas fa-file-pdf text-gray-400 text-5xl"></i>
+                </div>
+              {{ end }}
+            {{ else }}
+              <div class="bg-gray-100 w-full h-64 flex items-center justify-center p-4">
+                <i class="fas fa-file-pdf text-gray-400 text-5xl"></i>
+              </div>
+            {{ end }}
+            <div class="gradient-overlay bg-gradient-to-t from-{{ $color }}-600 to-orange-600"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h3 class="text-xl font-bold mb-1">{{ $title }}</h3>
+              <p class="text-white/90"><i class="fas fa-external-link-alt mr-1"></i> PDF</p>
+            </div>
+          </div>
+          <div class="p-6 bg-white flex flex-col flex-grow">
+            {{ with .Description }}
+              <p class="text-gray-600 mb-6 flex-grow">{{ . }}</p>
+            {{ end }}
+            <div class="mt-auto">
+              <div class="btn-explore w-full text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center group-hover:shadow-lg bg-gradient-to-r from-{{ $color }}-600 to-orange-600">
+                <i class="fas fa-download mr-2"></i>
+                Open PDF
+                <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  {{ else }}
+    <div class="text-center py-12">
+      <p class="text-gray-600 text-lg">No marketing materials available yet.</p>
+    </div>
+  {{ end }}
+</div>
+{{ end }}
