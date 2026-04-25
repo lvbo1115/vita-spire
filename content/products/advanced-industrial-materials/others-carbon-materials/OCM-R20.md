@@ -10,4 +10,5 @@ diameter: "~15nm"
 manufacture_method: "Bottom-up pyrolysis method of citric acid"
 storage: "Store at 4˚C for 1 year."
 concentration: "1mg/mL"
+features: "1mg/mL"
 ---
