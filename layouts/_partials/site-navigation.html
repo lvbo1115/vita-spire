@@ -34,10 +34,24 @@
 
       <!-- 移动端菜单按钮 -->
       <div class="md:hidden">
-        <button class="text-gray-700 hover:text-indigo-600 p-2">
+        <button id="mobile-menu-toggle" class="text-gray-700 hover:text-indigo-600 p-2">
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
+    <div class="px-4 py-4 space-y-2">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" class="block text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-2 px-3 rounded-lg text-base font-medium no-underline">
+        {{ .Name }}
+      </a>
+      {{ end }}
+      <button id="mobile-search-toggle" class="w-full text-left text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-2 px-3 rounded-lg text-base font-medium transition-colors">
+        <i class="fas fa-search mr-2"></i> Search
+      </button>
     </div>
   </div>
 
@@ -177,6 +191,24 @@ nav.fixed {
         console.error('Search index loading failed:', error);
         resultsContainer.innerHTML = '<div class="p-8 text-center text-red-500">Search service failed to load</div>';
       }
+    }
+
+    // 移动端菜单切换
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // 移动端搜索按钮
+    const mobileSearchToggle = document.getElementById('mobile-search-toggle');
+    if (mobileSearchToggle) {
+      mobileSearchToggle.addEventListener('click', function() {
+        openSearch();
+        if (mobileMenu) mobileMenu.classList.add('hidden');
+      });
     }
 
     // 4. Perform search
