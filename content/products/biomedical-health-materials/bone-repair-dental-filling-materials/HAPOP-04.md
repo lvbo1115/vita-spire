@@ -16,4 +16,6 @@ Cd (Cadmium): ≤5mg/kg
 Total Heavy Metals: ≤30mg/kg"
 storage: "Store at room temperature"
 shipping_packaging: "100g, 500g"
+features: |
+  30nm*100nm
 ---

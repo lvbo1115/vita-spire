@@ -16,4 +16,6 @@ Cd (Cadmium): ≤5mg/kg
 Total Heavy Metals: ≤30mg/kg"
 storage: "Store at room temperature"
 shipping_packaging: "500g, 1kg, 5kg. Samples are available. Please contact customer service."
+features: |
+  Easily agglomeration, <10µm after agglomeration
 ---

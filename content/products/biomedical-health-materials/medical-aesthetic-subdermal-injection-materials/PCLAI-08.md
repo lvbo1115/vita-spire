@@ -5,4 +5,6 @@ background: "PCL microspheres are a poly-α-hydroxy acid-based aliphatic polyest
 morphology_appearance: "Product appearance is white powder. The microscopic morphology is spherical."
 particle_size: "20-50µm"
 viscosity: "0.9-1.2 dl/g"
+features: |
+  20-50µm
 ---

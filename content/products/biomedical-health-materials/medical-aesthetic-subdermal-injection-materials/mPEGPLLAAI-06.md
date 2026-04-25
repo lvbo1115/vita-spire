@@ -10,4 +10,6 @@ particle_size: "10-20µm; 20-60µm; 20-50µm"
 viscosity: "0.9-1.2 dl/g"
 storage: "Store at room temperature"
 shipping_packaging: "Sample; 100g; 500g"
+features: |
+  10-20µm; 20-60µm; 20-50µm
 ---
