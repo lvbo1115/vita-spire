@@ -10,6 +10,26 @@ theme = 'ananke'
   email = "info@vita-spire.com"
   phone = "+1 605 585 4565"
 
+  [[params.social]]
+    name = "Facebook"
+    icon = "facebook-f"
+    url = "https://www.facebook.com/share/1Dm3zLDZME/?mibextid=wwXIfr"
+  
+  [[params.social]]
+    name = "X (Twitter)"
+    icon = "twitter"
+    url = "https://x.com/VitaSpireInc"
+  
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "linkedin-in"
+    url = "https://www.linkedin.com/company/vita-spire-inc/"
+  
+  [[params.social]]
+    name = "WhatsApp"
+    icon = "whatsapp"
+    url = "https://wa.me/message/TT4HUXYIDVLGC1"
+
 [[menu.main]]
   name = "Home"
   url = "/"
@@ -44,6 +64,26 @@ theme = 'ananke'
   name = "Contact Us"
   url = "/contact/"
   weight = 40
+
+[[menu.footer]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.footer]]
+  name = "Products"
+  url = "/products"
+  weight = 2
+
+[[menu.footer]]
+  name = "About"
+  url = "/about"
+  weight = 3
+
+[[menu.footer]]
+  name = "Contact"
+  url = "/contact"
+  weight = 4
 
 [outputs]
   home = ["HTML", "JSON", "RSS"]
