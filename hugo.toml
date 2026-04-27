@@ -17,7 +17,7 @@ theme = 'ananke'
   
   [[params.social]]
     name = "X (Twitter)"
-    icon = "twitter"
+    icon = "x-twitter"
     url = "https://x.com/VitaSpireInc"
   
   [[params.social]]

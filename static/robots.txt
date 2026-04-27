@@ -1,0 +1,31 @@
+# robots.txt for Vita Spire
+# https://www.vita-spire.com
+
+# 允许所有搜索引擎爬虫访问
+User-agent: *
+
+# 允许爬取所有内容
+Allow: /
+
+# 禁止爬取的目录（如果有后台或私密内容）
+Disallow: /admin/
+Disallow: /api/
+
+# 网站地图位置
+Sitemap: https://www.vita-spire.com/sitemap.xml
+
+# 针对特定搜索引擎的优化
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
