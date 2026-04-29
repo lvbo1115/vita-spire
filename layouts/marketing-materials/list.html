@@ -35,10 +35,10 @@
                 <i class="fas fa-file-pdf text-gray-400 text-5xl"></i>
               </div>
             {{ end }}
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent h-32 pointer-events-none"></div>
             <div class="gradient-overlay bg-gradient-to-t from-{{ $color }}-600 to-orange-600"></div>
-            <div class="absolute bottom-6 left-6 text-white">
-              <h3 class="text-xl font-bold mb-1">{{ $title }}</h3>
-              <p class="text-white/90"><i class="fas fa-external-link-alt mr-1"></i> PDF</p>
+            <div class="absolute bottom-3 left-6 text-white">
+              <h3 class="text-xl font-bold mb-1" style="text-shadow: 0 1px 3px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.4);">{{ $title }}</h3>
             </div>
           </div>
           <div class="p-6 bg-white flex flex-col flex-grow">

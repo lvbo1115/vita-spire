@@ -48,10 +48,11 @@
       <div class="product-card group">
         <div class="relative overflow-hidden">
           <img src="{{ $catImage }}" alt="{{ $cat.name }}" class="product-image w-full">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent h-32 pointer-events-none"></div>
           <div class="gradient-overlay bg-gradient-to-t from-{{ $cat.color }}-600 to-{{ if eq $cat.color "indigo" }}purple{{ else if eq $cat.color "emerald" }}teal{{ else }}orange{{ end }}-600"></div>
           <div class="absolute bottom-6 left-6 text-white">
-            <h3 class="text-2xl font-bold mb-2">{{ $cat.name }}</h3>
-            <p class="text-white/90">{{ $productCount }} products available</p>
+            <h3 class="text-2xl font-bold mb-2" style="text-shadow: 0 1px 3px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.4);">{{ $cat.name }}</h3>
+            <p class="text-white/90" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">{{ $productCount }} products available</p>
           </div>
         </div>
         <div class="p-6 bg-white">

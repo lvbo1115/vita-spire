@@ -84,23 +84,24 @@
             {{ end }}
           {{ end }}
           <div class="product-card group flex flex-col h-full">
-            <div class="relative overflow-hidden">
-              {{ if $finalImage }}
-                <img src="{{ $finalImage }}" alt="{{ $title }}" class="product-image w-full">
-              {{ else }}
-                <div class="bg-gray-100 w-full h-64 flex items-center justify-center p-4">
-                  <i class="fas fa-folder text-gray-400 text-5xl"></i>
-                </div>
-              {{ end }}
-              <div class="gradient-overlay bg-gradient-to-t from-{{ $color }}-600 to-{{ 
+          <div class="relative overflow-hidden">
+            {{ if $finalImage }}
+              <img src="{{ $finalImage }}" alt="{{ $title }}" class="product-image w-full">
+            {{ else }}
+              <div class="bg-gray-100 w-full h-64 flex items-center justify-center p-4">
+                <i class="fas fa-folder text-gray-400 text-5xl"></i>
+              </div>
+            {{ end }}
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent h-32 pointer-events-none"></div>
+            <div class="gradient-overlay bg-gradient-to-t from-{{ $color }}-600 to-{{ 
                 if eq $color "indigo" }}purple
                 {{ else if eq $color "emerald" }}teal
                 {{ else if eq $color "red" }}orange
                 {{ else }}gray{{ end }}-600"></div>
-              <div class="absolute bottom-6 left-6 text-white">
-                <h3 class="text-xl font-bold mb-1">{{ $title }}</h3>
-                <p class="text-white/90">{{ $pageCount }} items</p>
-              </div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h3 class="text-xl font-bold mb-1" style="text-shadow: 0 1px 3px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.4);">{{ $title }}</h3>
+              <p class="text-white/90" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">{{ $pageCount }} items</p>
+            </div>
             </div>
             <div class="p-6 bg-white flex flex-col flex-grow">
               <p class="text-gray-600 mb-6 flex-grow">{{ $description }}</p>
