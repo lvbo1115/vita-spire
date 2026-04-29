@@ -4,10 +4,10 @@
   <!-- Main Title -->
   <div class="text-center mb-16">
     <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
-      Pioneering Innovation
+      Engineering Materials for Life and Industry
     </h1>
     <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-      Discover our cutting-edge solutions in biomedical materials, nutrition science, and advanced industrial applications
+      High-Performance bioceramic, nutraceutical, and advanced materials for medical, industrial, and research applications
     </p>
   </div>
 
@@ -20,7 +20,7 @@
   <div class="text-center mb-16">
     <h2 class="section-title text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Product Categories</h2>
     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-      Discover our innovative solutions across three specialized domains.
+      Browse our core material categories for bulk supply, custom specifications, and global delivery.
     </p>
   </div>
 
@@ -55,9 +55,15 @@
           </div>
         </div>
         <div class="p-6 bg-white">
-          <p class="text-gray-600 mb-6">Click below to browse all products in this category.</p>
+          <p class="text-gray-600 mb-6">
+            {{ if $catPage.Params.card_description }}
+              {{ $catPage.Params.card_description }}
+            {{ else }}
+              Click below to browse all products in this category.
+            {{ end }}
+          </p>
           <a href="/products/{{ $cat.slug }}/" class="btn-explore w-full text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center group-hover:shadow-lg">
-            Explore Products
+            Browse Materials
             <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
           </a>
         </div>
