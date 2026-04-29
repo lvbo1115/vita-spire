@@ -1,7 +1,8 @@
 {{ $slides := slice
-  (dict "image" "/images/biomedical-health-materials.jpg" "title" "Biomedical & Health Materials" "desc" "Revolutionary biomaterials transforming healthcare" "color" "indigo")
-  (dict "image" "/images/human-nutrition-solutions.png" "title" "Human Nutrition Solutions" "desc" "Scientifically-backed nutritional ingredients for optimal health" "color" "emerald")
-  (dict "image" "/images/advanced-industrial-materials.jpg" "title" "Advanced Industrial Materials" "desc" "High-performance materials for aerospace, automotive, and energy" "color" "red")
+  (dict "image" "/images/slides/HAp-Powder-for-Thermal-Spraying.png" "title" "HAp Powder for Thermal Spraying & 3D Printing" "desc" "" "color" "indigo" "link" "/products/biomedical-health-materials/bioactive-coating-materials/")
+  (dict "image" "/images/slides/Medical-Aesthetic-Subdermal-Injection-Materials.png" "title" "Medical Aesthetic Subdermal Injection Materials" "desc" "" "color" "indigo" "link" "/products/biomedical-health-materials/medical-aesthetic-subdermal-injection-materials/")
+  (dict "image" "/images/slides/HAp-Powder-for-Oral-Care.png" "title" "HAp Powder for Oral Care" "desc" "" "color" "indigo" "link" "/products/biomedical-health-materials/personal-care-materials/")
+  (dict "image" "/images/slides/Bioceramic-Powder-for-Bone-Repair.png" "title" "Bioceramic Powder for Bone Repair & Dental Applications" "desc" "" "color" "indigo" "link" "/products/biomedical-health-materials/bone-repair-dental-filling-materials/")
 }}
 
 <div class="carousel-container" id="carousel">
@@ -10,11 +11,12 @@
     <img src="{{ $slide.image }}" alt="{{ $slide.title }}" class="w-full h-full object-cover">
     <div class="carousel-overlay">
       <div class="max-w-2xl">
-        <span class="inline-block bg-{{ $slide.color }}-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
-          {{ $slide.title }}
-        </span>
         <h2 class="text-3xl md:text-4xl font-bold mb-2 text-white">{{ $slide.title }}</h2>
-        <p class="text-gray-200 text-lg">{{ $slide.desc }}</p>
+        <p class="text-gray-200 text-lg mb-6">{{ $slide.desc }}</p>
+        <a href="{{ $slide.link }}" class="inline-block bg-{{ $slide.color }}-600 hover:bg-{{ $slide.color }}-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
+          Learn More
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
       </div>
     </div>
   </div>
